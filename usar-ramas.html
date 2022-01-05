@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Guía de git | Manual git</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/css/hoja_estilo.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bootstrap/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bootstrap/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper" >
+
+  <header class="main-header" style="position:fixed">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Guía git</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top"   >
+      <!-- Sidebar toggle button   class="sidebar-toggle"-->
+      <a href="#"  data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </nav>
+  </header>
+
+
+  <!-- Left side column. contains the sidebar -->
+    <aside class="main-sidebar" role="navigation">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar" style="position:fixed">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+          <li class="header"></li>
+          <!--OPCION EMPEZANDO-->
+          <li class="treeview">
+            <a href="index.html">
+               <span>Empezando</span>
+            </a>
+          </li>
+          <li class="treeview">
+            <a href="guardarCambios.html">
+              <span>Guardando Cambios</span></a>
+
+          </li>
+          <!--OPCION EMPEZANDOS-->
+
+          <!--OPCION INSPECCIONANDO UN REPOSITORIO-->
+          <li class="treeview">
+            <a href="inspeccionando.html">
+              <span>Inspeccionando un repositorio</span>
+            </a>
+          </li>
+          <!--TERMINA OPCION INSPECCIONANDO UN REPOSITORIO-->
+
+          <!-- OPCION VIENDO COMMITS ANTERIORES -->
+          <li class="treeview">
+            <a href="viendoCommits.html">
+              <span>Viendo commits anteriores</span>
+            </a>
+          </li>
+         <!--TERMINA OPCION VIENDO COMMITS ANTERIORES -->
+
+          <!--OPCION DESHACIENDO CAMBIOS-->
+          <li class="treeview">
+            <a href="deshacerCambios.html">
+              <span>Deshaciendo cambios</span>
+            </a>
+          </li>
+          <!-- TERMINA OPCION DESHACIENDO CAMBIOS -->
+
+          <!--OPCION COLABORADORES-->
+          <li class="treeview menu-open active">
+            <a href="sincronizar.html">
+              <span>Colaboradores</span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="sincronizar.html"> sincronizar</a>
+                </li>
+              <li><a href="usar-ramas.html"> usando ramas</a>
+                <ul class="treeview menu-open active">
+                  <li><a href="#git_branch">git branch</a></li>
+                  <li><a href="#git_checkout">git checkout</a></li>
+                  <li><a href="#git_merge">git merge</a></li>
+                </ul>
+
+              </li>
+
+              <li><a href="flujo-trabajo.html"><span>comparación de flujo de trabajo</span></a></li>
+            </ul>
+          </li>
+          <!-- TERMINA OPCION COLABORADORES -->
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+  <!-- =============================================== -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                      <div class="col-lg-12 text-center">
+                        <br>
+                        <h1><b>
+                          Usando ramas
+                        </b></h1>
+                          <img src="img/rama.svg" alt="imagen rama"/>
+                      </div>
+                    </div>
+                </div>
+                  <div class="col-lg-11">
+                            <div class="panel-body">
+                              <p class="lead">
+                                El modelo de colaboración de Git ofrece a cada desarrollador
+                                su propia copia del repositorio central, completo con su propia historia y la rama de
+                                la estructura local. Normalmente, los usuarios necesitan compartir una serie de
+                                commits en lugar de un conjunto de cambios.
+                                Git te permite compartir ramas enteras entre repositorios.
+                              </p>
+                              <div id="git_branch">
+                                <br>
+                                <h2>
+                                  git branch
+                                </h2>
+                                <br>
+                                <p class="lead">
+                                   Una rama representa una línea independiente de desarrollo. Las ramas sirven como una
+                                   abstracción para el proceso de editar/etapa/commit.
+                                   Se puede pensar en ellas como la manera
+                                   de solicitar un nuevo directorio  de trabajo, área de ensayo e historia del proyecto.
+                               </p>
+                                <p class="lead">
+                                  El comando <span class="textoCodigo">git branch</span> le permite crear, listar, renombrar y eliminar ramas.
+                                  Por esta razón, <span class="textoCodigo">git branch</span>
+                                  está estrechamente integrado con los comandos <span class="textoCodigo">git checkout</span> y <span class="textoCodigo">git merge</span>.
+                                </p>
+                                <br>
+                                <h3>
+                                  Uso
+                                </h3>
+                                <br>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                    <code>
+                                        git branch
+                                    </code>
+                                </div>
+                                <p class="lead">
+                                  Lista todas las ramas de tu repositorio.
+                                </p>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                    <code>
+                                        git branch &#60;rama&#62;
+                                    </code>
+                                </div>
+                                <p class="lead">
+                                Crea una nueva rama llamada &#60;rama&#62;.Este comando no te ubica a la nueva rama.
+                                </p>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                    <code>
+                                        git branch -d &#60;rama&#62;
+                                    </code>
+                                </div>
+                                <p class="lead">
+                                Elimina la rama especificada llamada &#60;rama&#62;. Ésta es una operación
+                                segura en la que Git te impide eliminar la rama si tiene cambios sin combinar.
+                                </p>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                    <code>
+                                        git branch -D &#60;rama&#62;
+                                    </code>
+                                </div>
+                                <p class="lead">
+                                 Fuerza a eliminar la rama especificada, incluso si tiene cambios sin combinar.
+                                </p>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                    <code>
+                                        git branch -m &#60;rama&#62;
+                                    </code>
+                                </div>
+                                <p class="lead">
+                                 Modifica el nombre de la rama actual a &#60;rama&#62;
+                                </p>
+                                <br>
+                                <h3>
+                                  Ejemplos
+                                </h3>
+                                <br>
+                                <br>
+                                <h3>
+                                  Creando ramas
+                                </h3>
+                                <br>
+                                <p class="lead" >
+                                  Es importante entender que las ramas son punteros de commits.
+                                  Cuando creas una rama, todo lo que Git necesita hacer es crear un nuevo apuntador - esto no
+                                  modifica el repositorio de ninguna manera.
+                                  Si comienzas con un repositorio que es como esto:
+                                </p>
+                                <div class="col-lg-12 text-center">
+                                  <img src="img/rama1.svg" alt="git remote imagen"/>
+                                </div>
+                                <p class="lead">
+                                  Entonces, creas una rama usando el siguiente comando:
+                                </p>
+                                <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                  <code class="codigoResultado" >
+                                    git branch modulo1
+                                  </code>
+                               </div>
+                               <p class="lead">
+                                 La historia del repositorio se mantiene sin cambios.
+                                  Todo lo que obtienes es un nuevo apuntador del commit actual:
+                               </p>
+                               <div class="col-lg-12 text-center">
+                                 <img src="img/rama2.svg" alt="git remote imagen"/>
+                               </div>
+                               <p class="lead">
+                                 Note que esto solo crea una  rama nueva. Para empezar a agregar commits a ésta,
+                                 necesitas seleccionar la rama con <span class="textoCodigo">git checkout</span>, y entonces usar los comandos
+                                 estándar <span class="textoCodigo">git add</span> y <span class="textoCodigo">git commit</span>.Por favor vea la sección <a href="#git_checkout"><span class="textoCodigo">git checkout</span></a>
+                                 de este módulo para más información.
+                               </p>
+                               <br>
+                               <h3>
+                                 Eliminando ramas
+                               </h3>
+                               <br>
+                              <p class="lead">
+                                Una vez que ha finalizado el trabajo sobre la rama y ha combinado ésta dentro
+                                del código base, es libre de eliminar la rama sin perder alguna historia:
+                              </p>
+                              <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                <code class="codigoResultado">
+                                  git branch -d modulo1
+                                </code>
+                            </div>
+                            <p class="lead">
+                               Sin embargo, si la rama no ha sido combinada, el comando puede tener como salida
+                               un mensaje de error:
+                            </p>
+                            <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                              <code class="codigoResultado">
+                                error: La rama 'modulo1' no ha sido combinada. <br>
+                                Si estás seguro de que deseas eliminarla , ejecute 'git branch -D modulo1'.<br>
+                              </code>
+                          </div>
+                          <p class="lead">
+                            Esto protege la pérdida de tus referencias a los commits, lo cual significa que podrías
+                            perder acceso a la linea de la entidad  de desarrollo.<br>
+                            Si realmente deseas eliminar la rama ,puedes usar -D:
+                          </p>
+                          <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                            <code class="codigoResultado">
+                              git branch -D modulo1
+                            </code>
+                        </div>
+                        <p class="lead">
+                          Esto elimina la rama  a pesar del estatus y sin avisos, úselo juiciosamente.
+                        </p>
+                        </div>
+
+
+                              <div id="git_checkout">
+                                <br>
+                                <h2>
+                                  git checkout
+                                </h2>
+                                <br>
+                                <p class="lead">
+                                  El comando <span class="textoCodigo">git checkout</span> le permite situarce en las ramas creadas por <span class="textoCodigo">git branch</span>.
+                                   El cambio de una rama actualiza los archivos del directorio de trabajo para
+                                   que coincida con la versión almacenada en esa rama, y  Git  registra
+                                    todos los nuevos commits en esa rama. Esto es
+                                    una manera de seleccionar qué línea de desarrollo  está trabajando.
+                                </p>
+                                <br>
+                                <h3>
+                                  Uso
+                                </h3>
+                                <br>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                  <code>
+                                    git checkout &#60;rama-existente&#62;
+                                  </code>
+                                </div>
+                                <p class="lead">
+
+                                  Nos cambia a la rama especificada,la cual debería haber sido creada con <span class="textoCodigo"> git branch</span>
+                                  Esto hace &#60;rama-existente&#62;
+                                  la rama actual y actualiza el directorio de trabajo para que coincida.
+                                </p>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                  <code>
+                                    git checkout -b &#60;nueva-rama&#62;
+                                  </code>
+                                </div>
+                                <p class="lead">
+                                  Crear y nos cambia a la rama  &#60;nueva rama&#62;. La opción -b  le indica
+                                    a Git ejecuta <span class="textoCodigo">git branch </span> &#60;nueva rama&#62; antes de
+                                </p>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                  <code>
+                                    git checkout &#60;nueva-rama&#62;.<br>
+                                    git checkout -b &#60;nueva-rama&#62; &#60;rama-existente&#62;
+                                  </code>
+                                </div>
+                                <br>
+                                  <h3>
+                                    Ejemplo
+                                  </h3>
+                                <br>
+                                <p class="lead">
+                                  El siguiente ejemplo muestra el proceso de ramificación  de Git.
+                                  Cuando se quiere comenzar a trabajar
+                                  en un nuevo feature, se crea una rama y se cambia a ésta:
+                                </p>
+                                <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                  <code class="codigoResultado">
+                                    git branch nuevo-feature <br>
+                                    git checkout nuevo-feature
+                                  </code>
+                                </div>
+                                <p class="lead">
+                                  A continuación, puede realizar nuevos commits:
+                                </p>
+                                <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                  <code class="codigoResultado">
+                                    <span># Editar algunos archivos</span> <br>
+                                      git add &#60;archivo&#62;<br>
+                                      git commit -m "Empecé a trabajar en un nuevo feature."<br>
+                                  <span>  # Repetir</span>
+                                  </code>
+                                </div>
+                                <p class="lead">
+                                  Todos estos se registran en el nuevo feature, que está completamente aislada de master.
+                                   Puede añadir tantos commits aquí como sea necesario sin tener que preocuparse
+                                   acerca de lo que está pasando en las otras ramas. Cuando llega el momento de
+                                   volver a la base del código "oficial", simplemente vaya a la rama principal:
+                                </p>
+                                <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                  <code class="codigoResultado">
+                                    git checkout master
+                                  </code>
+                                </div>
+                                <p class="lead">
+                                  Esto muestra el estado del repositorio antes de empezar su feature.
+                                   A partir de aquí, usted tiene la opción de combinar dentro el feature completado,
+                                   se ramifican una nueva característica de la rama,
+                                   o hace algún trabajo con la versión estable de su proyecto.
+                                </p>
+
+                              </div>
+
+                              <div id="git_merge">
+                              <br>
+                              <h2>
+                                git merge
+                              </h2>
+                              <br>
+                              <p class="lead">
+                                 El comando <span class="textoCodigo">git merge </span>le permite tomar las líneas independientes de desarrollo
+                                 creadas por  <span class="textoCodigo">git branch</span> e integrarlos en una sola rama.
+                              </p>
+                              <p class="lead">
+                                  Note que los comandos que se presentan a continuación se realizan en la rama actual.
+                                  La rama actual será actualizada para reflejar el merge, pero la rama objetivo no se verá afectada
+                                   en absoluto. Esto significa que <span class="textoCodigo">git merge</span> se utiliza a menudo en
+                                  combinación con <span class="textoCodigo">git checkout</span> para la selección de la rama y <span class="textoCodigo">git -d branch</span>
+                                  para borrar la rama objetivo obsoleta.
+                              </p>
+                              <br>
+                              <h3>
+                                Uso
+                              </h3>
+                              <br>
+                              <div class="col-lg-12 alert alert-dismissible box-header">
+                                <code>
+                                  git merge &#60;rama&#62;
+                                </code>
+                             </div>
+                             <p class="lead">
+                               Combina la rama especificada dentro de la rama actual. Git determinará  automáticamente el algoritmo
+                               de combinación.
+                             </p>
+                            <div class="col-lg-12 alert alert-dismissible box-header">
+                               <code>
+                                 git merge --no-ff &#60;branch&#62;
+                               </code>
+                           </div>
+                           <p class="lead">
+                            Combina la rama especificada en la rama actual, pero siempre genera un commit
+                            de combinación  (incluso si se trataba de una combinación de avance rápido).
+                            Esto es útil para documentar todas las combinaciones que se producen en su repositorio.
+                           </p>
+                           <p class="lead">
+                             Una vez que haya terminado el desarrollo de un feature en una rama aislada, es importante
+                              obtener de nuevo en la base de código principal. Dependiendo de la estructura
+                              de su repositorio, Git tiene varios algoritmos distintos para lograr esto:
+                              fast-forward merge o  3-way merge.
+                           </p>
+                           <br>
+                           <h3>
+                             Ejemplo
+                           </h3>
+                           <br>
+                           <h4>
+                             <b>Fast-Forward Merge</b>
+                           </h4>
+                           <br>
+                           <p class="lead">
+                             Este ejemplo muestra la combinación Fast-Forward Merge. El siguiente código crea una nueva rama,
+                             añade dos commit a ella, entonces la integra en la línea principal con una combinación Fast-Forward Merge.
+                           </p>
+                             <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                <code class="codigoResultado">
+                                    <span># Comenzar un nuevo feature </span><br>
+                                    git checkout -b nuevo-feature master<br><br>
+
+                                  <span>  # Editar algunos archivo </span><br>
+                                    git add &#60;archivo&#62; <br>
+                                    git commit -m "Empezar un feature" <br><br>
+
+                                  <span>  # Editando algunos archivos </span><br>
+                                    git add &#60;archivo&#62; <br>
+                                    git commit -m "Terminando un feature" <br><br>
+
+                                    <span># Combina  dentro de la rama new-feature </span><br>
+                                    git checkout master <br>
+                                    git merge nuevo-feature <br>
+                                    git branch -d nuevo-feature<br>
+                                </code>
+                              </div>
+                              <p class="lead">
+                                Se trata de un workflow común para ramas puntuales de corta duración que se usan más como
+                                desarrollo aislado que una herramienta de organización para features de larga ejecución.
+                              </p>
+                              <br>
+                              <h4>
+                                <b>3-Way Merge</b>
+                              </h4>
+                              <br>
+                              <p class="lead">
+                                El siguiente ejemplo es muy similar, pero requiere un 3-Way Merge porque master
+                                avanza mientras que el feature está en progreso. Este es un escenario común
+                                para grandes features o cuando varios desarrolladores están trabajando en un proyecto de forma simultánea.
+                              </p>
+                              <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                 <code class="codigoResultado">
+                                <span>  # Empezar un nuevo-feature </span><br>
+                                  git checkout -b nuevo-feature master <br> <br>
+
+                                  <span># Editar algunos archivos </span><br>
+                                  git add &#60;archivo&#62; <br>
+                                  git commit -m "Empezar un feature" <br> <br>
+
+                                <span>  # Editar algunos archivos </span><br>
+                                  git add &#60;archivo&#62; <br>
+                                  git commit -m "Terminando un feature" <br> <br>
+
+                                  <span># Desarrollar la rama master</span> <br>
+                                  git checkout master <br> <br>
+
+                                  <span># Editar algunos archivos </span><br>
+                                  git add &#60;archivo&#62; <br>
+                                  git commit -m "Creando  super-cambios estables para master" <br> <br>
+
+                                  <span># Combina dentro la rama new-feature</span><br>
+                                  git merge nuevo-feature <br>
+                                  git branch -d nuevo-feature <br>
+                                 </code>
+                               </div>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                               <h4>Siguiente</h4>
+
+                                <a href="flujo-trabajo.html">
+                                  <img src="img/comparing_workflow.svg" alt="rama imagen"  />
+                                </a>
+                                <h4> Workflows </h4>
+                           </div>
+
+
+
+
+
+
+                              </div>
+                          </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+
+    </section>
+      </div>
+      <!-- /.content-wrapper -->
+
+      <footer class="main-footer">
+        <strong>Copyright &copy; 2016</strong>
+      </footer>
+
+      <!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+      <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery 2.2.3 -->
+    <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="plugins/fastclick/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Guía de git | Manual git</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bootstrap/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bootstrap/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper" >
+
+  <header class="main-header" style="position:fixed; width:100%">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Guía git</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" >
+      <!-- Sidebar toggle button-->
+      <a href="#" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </nav>
+  </header>
+
+
+  <!-- Left side column. contains the sidebar -->
+    <aside class="main-sidebar" role="navigation">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar" style="position:fixed">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+          <li class="header"></li>
+          <!--OPCION EMPEZANDO-->
+          <li class="treeview">
+            <a href="index.html">
+               <span>Empezando</span>
+            </a>
+
+          </li>
+          <li class="treeview menu-open active">
+            <a href="../../guardarCambios.html">
+              <span>Guardando Cambios</span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="#git_add">git add</a></li>
+              <li><a href="#git_commit">git commit</a></li>
+            </ul>
+          </li>
+          <!--OPCION EMPEZANDOS-->
+
+          <!--OPCION INSPECCIONANDO UN REPOSITORIO-->
+          <li class="treeview">
+            <a href="inspeccionando.html">
+              <span>Inspeccionando un repositorio</span>
+            </a>
+
+          </li>
+          <!--TERMINA OPCION INSPECCIONANDO UN REPOSITORIO-->
+
+          <!-- OPCION VIENDO COMMITS ANTERIORES -->
+          <li class="treeview">
+            <a href="viendoCommits.html">
+              <span>Viendo commits anteriores</span>
+            </a>
+          </li>
+         <!--TERMINA OPCION VIENDO COMMITS ANTERIORES -->
+
+          <!--OPCION DESHACIENDO CAMBIOS-->
+          <li class="treeview">
+            <a href="deshacerCambios.html">
+              <span>Deshaciendo cambios</span>
+            </a>
+
+          </li>
+          <!-- TERMINA OPCION DESHACIENDO CAMBIOS -->
+
+          <!--OPCION COLABORADORES-->
+          <li class="treeview">
+            <a href="sincronizar.html">
+              <span>Colaboradores</span>
+            </a>
+
+          </li>
+          <!-- TERMINA OPCION COLABORADORES -->
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+  <!-- =============================================== -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                       <div class="row">
+                            <div class="col-lg-12 text-center">
+                              <br>
+                              <h1 id="git_add"><b>Guardando Cambios</b></h1>
+                               <img width="50%" src="img/empezando/guardarC2.svg" alt="repositorio" />
+                            </div>
+                          </div>
+                        <br>
+                        <h2 ><b>git add</b></h2>
+                        <br>
+                        <p class="lead">Se guardan los cambios en el directorio, este comando se debe de hacer a todos los archivos que se hayan modificado o creado en el directorio donde se encuentra el proyecto, podemos ejecutar la línea de comando <i>git status </i>, para ver los cambios que se han hecho al directorio.</p>
+                        <br>
+                        <p class="lead">Uso para agregar un solo archivo:</p><br>
+                        <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code  style="background-color:transparent;color:#000000"><b>git add &#60;file&#62;</b></code></p>
+                           </div>
+                        </div>
+                        <!-- ejemplo de git add file -->
+
+                           <div class="row" >
+                                <div class="col-lg-12" >
+                                    <div style="padding-right:10%; padding-left:10%">
+                                      <h3><i>Ejemplo</i></h3>
+                                      <p class="lead">Si en el directorio se creó un nuevo archivo, o si un archivo existente fue modificado es encesario añadirlo nuevamente al repositorio.</p>
+                                      <div class="row">
+                                        <div class="alert alert-dismissible  bg-black-active color-palette">
+                                            <p><code style="background-color:transparent;color:#f5f5f5"><b>$ git add index.php
+                                          </b>
+                                         </code></p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          <!-- termina ejemplo de git add file -->
+
+
+                        <br>
+                        <p class="lead">Uso para agregar un directorio:</p><br>
+                         <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code style="background-color:transparent;color:#000000"><b>git add &#60;directory&#62;</b></code></p>
+                            </div>
+                          </div>
+                             <!-- ejemplo de git add directorio -->
+
+                           <div class="row" >
+                                <div class="col-lg-12" >
+                                    <div style="padding-right:10%; padding-left:10%">
+                                      <h3><i>Ejemplo</i></h3>
+                                      <p class="lead">Suponiendo que hemos creado un subdirectorio, también se debe agregar al repositorio.</p>
+                                       <div class="row">
+                                        <div class="alert alert-dismissible  bg-black-active color-palette">
+                                            <p><code style="background-color:transparent;color:#f5f5f5"><b>$ ls<br>
+                                            file1.c file2.c file3.c file4.c file4.c <span style="color:#3C763D">morefiles</span><br>
+                                          </b>
+                                         </code></p>
+                                        </div>
+                                      </div>
+                                      <p class="lead">En este caso nuestro subdirectorio es <span style="color:#3C763D">morefiles</span>, así que para agregarlo hacemos lo siguiente.</p>
+                                      <div class="row">
+                                        <div class="alert alert-dismissible  bg-black-active color-palette">
+                                            <p><code style="background-color:transparent;color:#f5f5f5"><b>$ git add  morefiles
+                                          </b>
+                                         </code></p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          <!-- termina ejemplo de git add directory -->
+                        <br>
+                        <p class="lead">se recomienda guardar todos los cambios antes de un commit:</p><br>
+                         <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code  id="git_commit" style="background-color:transparent;color:#000000"><b>git add -p</b></code></p>
+                            </div>
+                          </div>
+
+                        <br><br>
+                        <h2 ><b>git commit</b></h2>
+                        <br>
+                        <p class="lead">Es uno de los comandos más importantes junto con git add, ya que crea una copia segura o estable de un proyecto Git, estas copias estables o seguras son sólo localmente lo que significa que no tiene interacción con los repositorios de Git.</p>
+                        <br>
+                        <p class="lead">Uso:</p>
+                        <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code style="background-color:transparent;color:#000000"><b>git commit</b></code></p>
+                            </div>
+                          </div>
+                        <br>
+                        <p class="lead">Lo más recomendable es agregarle una descripción al commit, de esta forma llevas un control de os cambios que le has hecho al proyecto. </p><br>
+                        <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2">
+                              <p><code style="background-color:transparent;color:#000000"><b>git commit -m "&#60;message&#62;"</b></code></p>
+                            </div>
+                          </div>
+                          <!-- ejemplo de git add directorio -->
+
+                           <div class="row" >
+                                <div class="col-lg-12" >
+                                    <div style="padding-right:10%; padding-left:10%">
+                                      <h3><i>Ejemplo</i></h3>
+                                      <p class="lead">Una vez agregados todos los archivos modificados o creados al repositorio local, entonces se ejecuta el comando commit como sigue </p>
+                                       <div class="row">
+                                       <div class="alert alert-dismissible  bg-black-active color-palette">
+                                            <p><code style="background-color:transparent;color:#f5f5f5"><b>$git commit -m "descripción de lo se ha hecho en este commit"
+                                          </b>
+                                         </code></p>
+                                        </div>
+                                      </div>
+                                     <p class="lead">El mensaje que se le coloca al commit es como un identifiacador para saber que cambios se le han hecho al proyecto entre desde el ultimo commit ejecutado.</p>
+                                    </div>
+                                </div>
+                            </div>
+                          <!-- termina ejemplo de git add directory -->
+                        <br>
+                        <br><br>
+                        <div class="row">
+                          <div class="col-lg-12 text-center">
+                            <h2 class="leader">Siguiente</h2>
+                             <a href="inspeccionando.html"><img src="img/empezando/inspeccionar.svg" alt="repositorio" width='60%'/></a>
+                            <h3 class="leader">Inspeccionando un repositorio</h3>
+                      </div>
+                    </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+    </section>
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2016</strong>
+  </footer>
+
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+</body>
+</html>

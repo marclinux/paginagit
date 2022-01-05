@@ -1,0 +1,41 @@
+.textoCodigo{
+font-family:Courier New,Courier;
+
+}
+p{
+  text-align: justify;
+}
+code{
+  background-color:transparent;
+  color:#000000;
+  font-weight: bold;
+}
+.codigoResultado{
+  background-color:transparent;
+  color:#f5f5f5;
+}
+.box-header{
+  background-color:#7CB2D2;
+}
+
+.divConsola
+{
+  background-color:transparent;
+  color:#f5f5f5;
+}
+img{
+  width: 50%;
+}
+
+h2{
+  font-weight: bold;
+}
+
+#imgMenu{
+  width: 2%;
+    height: 2%;
+    margin: 1em 1em 1em 1em;
+}
+.main-header{
+  width: 100%;
+}

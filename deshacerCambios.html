@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Guía de git | Manual git</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bootstrap/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bootstrap/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper" >
+
+  <header class="main-header" style="position:fixed; width:100%">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Guía git</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" >
+      <!-- Sidebar toggle button-->
+      <a href="#"  data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </nav>
+  </header>
+
+
+  <!-- Left side column. contains the sidebar -->
+    <aside class="main-sidebar" role="navigation">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar" style="position:fixed">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+          <li class="header"></li>
+          <!--OPCION EMPEZANDO-->
+          <li class="treeview">
+            <a href="index.html">
+               <span>Empezando</span>
+            </a>
+
+          </li>
+          <li class="treeview">
+            <a href="guardarCambios.html">
+              <span>Guardando Cambios</span>
+            </a>
+
+          </li>
+          <!--OPCION EMPEZANDOS-->
+
+          <!--OPCION INSPECCIONANDO UN REPOSITORIO-->
+          <li class="treeview">
+            <a href="inspeccionando.html">
+              <span>Inspeccionando un repositorio</span>
+            </a>
+
+          </li>
+          <!--TERMINA OPCION INSPECCIONANDO UN REPOSITORIO-->
+
+          <!-- OPCION VIENDO COMMITS ANTERIORES -->
+          <li class="treeview">
+            <a href="viendoCommits.html">
+              <span>Viendo commits anteriores</span>
+            </a>
+          </li>
+         <!--TERMINA OPCION VIENDO COMMITS ANTERIORES -->
+
+          <!--OPCION DESHACIENDO CAMBIOS-->
+          <li class="treeview menu-open active">
+            <a href="deshacerCambios.html">
+              <span>Deshaciendo cambios</span>
+            </a>
+            <ul class="treeview menu-open active">
+              <li><a href="#git_checkout">git checkout</a></li>
+              <li><a href="#git_revert">git revet</a></li>
+              <li><a href="#git_reset">git reset</a></li>
+            </ul>
+          </li>
+          <!-- TERMINA OPCION DESHACIENDO CAMBIOS -->
+
+          <!--OPCION COLABORADORES-->
+          <li class="treeview">
+            <a href="sincronizar.html">
+              <span>Colaboradores</span>
+            </a>
+
+          </li>
+          <!-- TERMINA OPCION COLABORADORES -->
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+  <!-- =============================================== -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+
+     <div class="container-fluid">
+
+                <!-- Page Heading -->
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                         <div class="row">
+                          <div class="col-lg-12 text-center">
+                            <br>
+                            <h1><b>Deshacer cambios</b></h1>
+                            <img src="img/empezando/deshacer.svg" alt="repositorio" width='80%'/>
+                          </div>
+                         </div>
+                        <br>
+                        <p class="lead" id="git_checkout"> Se proporcionan la habilidades necesarias para trabajar con revisiones anteriores de un proyecto. En primer lugar muestra como explorar commits viejos, y se explican los comandos de reset y revert.</p>
+
+
+                        <h2><b>git checkout</b></h2>
+                        <br>
+                        <p class="lead">El comando <i>git checkout</i> cumple tres funciones distintas y es el registro de los commits, la protección de archivos y el cambio hacia ramas existentes en el repositorio.</p>
+                        <br>
+                        <p class="lead">Uso:</p>
+                        <div class="row">
+                         <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code  style="background-color:transparent;color:#000000"><b>git checkout master</b></code></p>
+                            </div>
+                          </div>
+                        <p class="lead">Nos permite regresar a la rama principal o rama master del proyecto.</p>
+                        <br>
+                         <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code  style="background-color:transparent;color:#000000"><b>git checkout &#60;commit&#62; &#60;file&#62;</b></code></p>
+                            </div>
+                          </div>
+                        <p class="lead">Podemos  ver una versión anterior de un &#60;file&#62; (archivo) que reside en el directorio de trabajo en una copia exacta del proyecto. </p>
+                        <br>
+                         <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code  style="background-color:transparent;color:#000000"><b>git checkout &#60;commit&#62;</b></code></p>
+                            </div>
+                          </div>
+                        <p class="lead" id="git_revert">Actualiza todos los archivos del directorio de trabajo que coincida con el commit especificado.</p><br>
+                        <br><br>
+                        <h2><b>git revert</b></h2>
+                        <br>
+                        <p class="lead">El comando <i>git revert</i> deshace commits, pero en lugar de eliminar el commit del historial del proyecto agrega un nuevo commit con el contenido resultante, de esta forma se mantiene la integridad del historial del revisiones.</p>
+                        <br>
+                         <div class="row">
+                          <div class="col-lg-12 text-center">
+                           <img src="img/empezando/revert.svg" alt="repositorio" width='80%'/>
+                          </div>
+                         </div>
+                        <p class="lead">Uso</p><br>
+                        <div class="row">
+                          <div id="git_reset"class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code  style="background-color:transparent;color:#000000"><b>git revert &#60;commit&#62;</b></code></p>
+                            </div>
+                          </div>
+                        <br>
+                         <h2><b>git reset</b></h2>
+                        <br>
+                        <p class="lead">Si el <i>git revert</i> se considera una manera segura de deshacer cambios, el comando <i>git reset</i> se considera el método peligroso. Al ocupar git reset no hay forma de recuperar la copia original. Se debe tener cuidado al utilizar este comando, ya que si no se ocupa de manera correcta podría perder su proyecto.</p>
+                        <br>
+                         <div class="row">
+                          <div class="col-lg-12 text-center">
+                            <img src="img/empezando/reset.svg" alt="repositorio" width='80%'/>
+                            <h2>Deshacer cambios</h2>
+                          </div>
+                         </div>
+
+
+
+                        <p class="lead">Al igual que <i>git checkout</i>, <i>git reset</i> es un comando versátil con muchas configuraciones.</p>
+                        <br>
+                        <p class="lead">Uso</p>
+                        <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code  style="background-color:transparent;color:#000000"><b>git reset &#60;file&#62;</b></code></p>
+                            </div>
+                          </div>
+
+
+                        <p class="lead">Quita el archivo especificado desde el área de trabajo, pero deja el directorio sin algún cambio.</p>
+                        <br>
+                        <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code  style="background-color:transparent;color:#000000"><b>git reset</b></code></p>
+                            </div>
+                          </div>
+                        <p class="lead">Reestablece el área de trabajo para que coincida con el commit más reciente.</p><br>
+                        <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code  style="background-color:transparent;color:#000000"><b>git reset --hard</b></code></p>
+                            </div>
+                          </div>
+                        <p class="lead">Reestablece el área de trabajo para que coincida con el commit más reciente, además de sobreescribir todos los cambios en el directorio de trabajo. Dicho de otro modo: esto borra todos los cambios sin confirmar, por esta razón es importante estar seguro de deshacer los cambios locales.</p>
+                        <br><br>
+                        <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code  style="background-color:transparent;color:#000000"><b>git reset  &#60;commit&#62;</b></code></p>
+                            </div>
+                          </div>
+                        <br>
+                        <p class="lead">Mueve la cabeza o la punta de la rama actual hacia atrás  al &#60;commit&#62; definido en la línea de comando, restableciendo todos los archivos e información que se tenía en ese &#60;commit&#62;.  Todos los cambios realizados desde &#60;commit&#62; residirán en el directorio de trabajo, que le permite volver a un  &#60;commit&#62; del proyecto.</p><br>
+                        <div class="row">
+                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
+                              <p><code  style="background-color:transparent;color:#000000"><b>git reset --hard &#60;commit&#62;</b></code></p>
+                            </div>
+                          </div>
+                        <p class="lead">Mueve la cabeza o punta de la rama actual hacia &#60;commit&#62; especificado y restablece tanto el área de trabajo y el directorio de trabajo para que coincida. Esto no sólo borra los cambios no confirmados, sino que confirma después del &#60;commit&#62;.</p>
+                        <br><br>
+                        <div class="col-lg-12 text-center">
+                           <h2 class="leader">Siguiente</h2>
+
+                            <a href="sincronizar.html">
+                              <img src="img/sincronizar.svg" alt="sincronizacion" style="width:40%" />
+                            </a>
+                            <h4> Colaboradores </h4>
+                       </div>
+                     </div>
+
+                </div>
+
+
+            </div>
+    </section>
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2016</strong>
+  </footer>
+
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+</body>
+</html>

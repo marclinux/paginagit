@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Guía de git | Manual git</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bootstrap/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bootstrap/ionicons.min.css">
+  <link rel="stylesheet" href="bootstrap/css/hoja_estilo.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper" >
+
+  <header class="main-header" style="position:fixed">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Guía git</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top"   >
+      <!-- Sidebar toggle button class="sidebar-toggle"-->
+      <a href="#"  data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </nav>
+  </header>
+
+
+  <!-- Left side column. contains the sidebar -->
+    <aside class="main-sidebar" role="navigation">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar" style="position:fixed">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+          <li class="header"></li>
+          <!--OPCION EMPEZANDO-->
+          <li class="treeview">
+            <a href="index.html">
+               <span>Empezando</span>
+            </a>
+          </li>
+          <li class="treeview">
+            <a href="guardarCambios.html">
+              <span>Guardando Cambios</span></a>
+          </li>
+          <!--OPCION EMPEZANDOS-->
+
+          <!--OPCION INSPECCIONANDO UN REPOSITORIO-->
+          <li class="treeview">
+            <a href="inspeccionando.html">
+              <span>Inspeccionando un repositorio</span>
+            </a>
+          </li>
+          <!--TERMINA OPCION INSPECCIONANDO UN REPOSITORIO-->
+
+          <!-- OPCION VIENDO COMMITS ANTERIORES -->
+          <li class="treeview">
+            <a href="viendoCommits.html">
+              <span>Viendo commits anteriores</span>
+            </a>
+          </li>
+         <!--TERMINA OPCION VIENDO COMMITS ANTERIORES -->
+
+          <!--OPCION DESHACIENDO CAMBIOS-->
+          <li class="treeview">
+            <a href="deshacerCambios.html">
+              <span>Deshaciendo cambios</span>
+            </a>
+          </li>
+          <!-- TERMINA OPCION DESHACIENDO CAMBIOS -->
+
+          <!--OPCION COLABORADORES-->
+          <li class="treeview menu-open active">
+            <a href="sincronizar.html">
+              <span>Colaboradores</span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="sincronizar.html"> sincronizar</a>
+                </li>
+              <li><a href="usar-ramas.html"> usando ramas</a>
+              </li>
+              <li><a href="flujo-trabajo.html"><span>comparación de flujo de trabajo</span></a></li>
+            </ul>
+          </li>
+          <!-- TERMINA OPCION COLABORADORES -->
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+  <!-- =============================================== -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                      <div class="col-lg-12 text-center">
+                        <br>
+                        <h1 ><b>
+                          Workflows
+                        </b></h1>
+                        <img src="img/comparing_workflow.svg" alt="imagen workflow"/>
+                      </div>
+                    </div>
+                </div>
+                  <div class="col-lg-11">
+                            <div class="panel-body">
+                              <p class="lead">
+                                El conjunto de posibles workflows puede ser difícil para saber por dónde empezar
+                                cuando se implemente Git en el lugar de trabajo. Ofrecemos un punto de partida mediante
+                                encuestas más comunes a los workflows de Git  para los equipos de  la empresa.
+                              </p>
+                              <p class="lead">
+                                Los workflows están diseñados para ser guías en
+                                lugar de reglas concretas. Mostraremos lo que es posible, por lo que puede mezclar y
+                                combinar los aspectos de diferentes workflows para adaptarse a sus necesidades individuales.
+                              </p>
+                              <div class="col-lg-12 text-center">
+                                <img src="img/workflow_centralizado2.svg"  alt="imagen workflow centralizado"/>
+                              </div>
+                              <p class="lead">
+                                La transición a un sistema de control de versiones distribuido puede parecer una tarea de gran
+                                proporción, pero  no tienes que cambiar tu workflow  existente para tomar ventaja de Git.
+                                Tu equipo puede desarrollar proyectos de la misma manera como lo hacen con Subversion.
+                              </p>
+                              <p class="lead">
+                                Sin embargo, el uso de Git para alimentar el workflow de desarrollo presenta algunas ventajas
+                                sobre SVN. En primer lugar,da a todos los desarrolladores su propia copia local de todo el proyecto.
+                                Este entorno aislado permite a cada desarrollador trabajar independiente de todos los otros cambios en un
+                                proyecto -Ellos pueden añadir commits a su repositorio local y olvidar por completo acerca del desarrollo
+                                upstream hasta que sea conveniente para ellos.
+                              </p>
+                              <p class="lead">
+                                En segundo lugar, le da acceso a la robusta ramificación y modelo de fusión de Git . A diferencia de SVN,
+                                en Git las ramas están diseñadas para ser un mecanismo de seguridad para la integración de código y el intercambio
+                                de modificaciones entre repositorios
+                              </p>
+                              <br>
+                              <h3>
+                                Cómo trabaja
+                              </h3>
+                              <br>
+                               <p class="lead">
+                                 Los desarrolladores comienzan clonando el repositorio central. En sus propias copias locales del proyecto, editan
+                                 archivos y envian los cambios como lo harían con SVN; sin embargo, estas nuevas confirmaciones se almacenan
+                                 localmente -son completamente aislada del repositorio central. Esto permite a los desarrolladores diferir la
+                                 sincronización de upstream hasta que estén en un punto de ruptura conveniente.
+                               </p>
+                               <p class="lead">
+                                 Para publicar los cambios en el proyecto oficial, los desarrolladores  realizan un "push"
+                                  de la rama principal local en el repositorio central. Esto es el equivalente a svn commit, excepto que se añade a todos los commits locales
+                                   que no están ya en la rama master central.
+                               </p>
+                               <div class="col-lg-12 text-center">
+                                 <img src="img/workflow1_how_work.svg" alt="repositorio central" />
+                                 <img src="img/workflow2.svg" alt="repositorio central" />
+                               </div>
+                              <br>
+                              <h3>
+                                Ejemplo
+                              </h3>
+                              <br>
+                              <p class="lead">
+                                Vamos a mostrar la forma en que un equipo pequeño colaboraría usando este workflow.
+                                Veremos como dos desarrolladores, Juan y María, pueden trabajar en funciones separadas y
+                                compartir sus contribuciones a través de un repositorio centralizado.
+                              </p>
+                              <br>
+                              <h4><b>Alguien inicializa el repositorio central</b></h4>
+                              <br>
+                              <div class="col-lg-12 text-center">
+                                <img src="img/workflow_example2.svg" alt="repositorio " />
+                              </div>
+                              <br><h4><b>Todos clonan el repositorio central</b></h4><br>
+                              <p class="lead">
+                                  Cada desarrollador crea una copia local del proyecto. Esto se realiza con el comando
+                                  <span class="textoCodigo">git clone</span>.
+                              </p>
+                                <div class="col-lg-12 text-center">
+                                  <img src="img/workflow_centralizado2.svg" alt="work john " />
+                                </div>
+                                <br>
+                                <h4 >
+                                  <b>Juan trabaja sobre su feature</b>
+                                </h4>
+                                <br>
+                                <div class="col-lg-12 text-center">
+                                  <img src="img/centralizado.svg" alt="work john " />
+                                </div>
+                                <p class="lead">
+                                  En su repositorio local, Juan desarrolla sus features usando el proceso commit estándar: editar, etapa  y commit.
+                                </p>
+                                <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                <code class="codigoResultado">
+                                  git status # Vista del estado del repositorio <br>
+                                  git add &#60;algun-archivo&#62; # etapa un archivo<br>
+                                  git commit # Commit un archivo &#60;/algun-archivo&#62;
+                                </code>
+                              </div>
+                              <br>
+                                <h4 class="lead">
+                                  <b>María trabaja sobre su feature</b>
+                                </h4>
+                                <br>
+                                <div class="col-lg-12 text-center">
+                                  <img src="img/centralizado.svg" alt="repositorio imagen "/>
+                                </div>
+                                <p class="lead">
+                                  Mientras tanto, María está trabajando en su propio feature en su propio repositorio local utilizando
+                                   el mismo proceso editar / etapa/ commit.
+                                </p>
+                                <br>
+                                <h4 class="lead">
+                                  <b>Juan publica su feature</b>
+                                </h4>
+                                <br>
+                               <div class="col-lg-12 text-center">
+                                <img src="img/workflow_john_work2.svg" alt="publicación john " />
+                              </div>
+                                <p class="lead">
+                                   Juan termina su feature, publica sus commits locales al repositorio central
+                                  para que los otros miembros del equipo pueden acceder a ellos.
+                                </p>
+                                <br>
+                                <h4 class="lead">
+                                  <b>María intenta publicar su feature</b>
+                                </h4>
+                                <br>
+                                <div class="col-lg-12 text-center">
+                                  <img src="img/mary_error.svg" alt="error maría imagen " />
+                                </div>
+                                <p class="lead">
+                                  Vamos a ver lo que sucede si María intenta subir  su feature después de que Juan ha
+                                  publicado con éxito sus cambios en el repositorio central. Ella utiliza el comando <span class="textoCodigo">git push</span>
+                                  para subir su módulo.
+                                  Pero, ya que su historia local se desvía del repositorio central, Git rechazará la solicitud
+                                   con un mensaje de error en lugar detallado:
+                                </p>
+                                <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                <code class="codigoResultado">
+                                  error: failed to push some refs to '/path/to/repo.git' <br>
+                                  hint: Las actualizaciones fueron rechazadas debido a que la extremidad de su rama actual está <br>
+                                  hint: detrás de su contraparte remoto. Combine los cambios remotos (por ejemplo, 'git pull') <br>
+                                  hint: antes de realizar el push de nuevo.  <br>
+                                  hint: Ver la 'Nota sobre fast-forwards' en 'git push --help' para más detalles.<br>
+                                  sincronizar/
+                                </code>
+
+
+
+
+
+
+
+                              </div>
+                                <p class="lead">
+                                  Esto evita que María sobrescriba los commits oficiales. Ella tiene que extraer las actualizaciones del repositorio de Juan
+                                  en su repositorio local e integrarlos con sus cambios locales y, a continuación, intentar subir su actualización de nuevo.
+                                </p>
+
+                                <br>
+                                <h4 class="lead">
+                                  <b>María integra los commits de Juan</b>
+                                </h4>
+                                <br>
+                                <div class="col-lg-12 text-center">
+                                  <img src="img/mary_trabaja3.svg" alt="error maría imagen " />
+                                </div>
+                                <p class="lead">
+                                  María puede usar <span class="textoCodigo">git pull</span> para incorporar cambios upstream
+                                  dentro de su repositorio. Este comando es  algo así como svn update -
+                                  extrae la totalidad upstream dentro de la historia del repositorio local de María y
+                                  trata de integralos con sus commits locales
+                                </p>
+                                <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                <code class="codigoResultado">
+                                  git pull --rebase origin master
+                                </code>
+                              </div>
+                              <p class="lead">
+                                La option --rebase le indica a Git que mueva todos los commits
+                                de María a la punta de la rama master después de la sincronización  con los
+                                cambios del repositorio central, como se muestra a continuación:
+                              </p>
+                              <div class="col-lg-12 text-center">
+                                <img src="img/conflicto_maria.svg" alt="error maría imagen " />
+                              </div>
+                            </div>
+                     </div>
+                </div>
+                <!-- /.row -->
+            </div>
+          </section>
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer class="main-footer">
+          <strong>Copyright &copy; 2016</strong>
+        </footer>
+
+        <!-- Add the sidebar's background. This div must be placed
+             immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+      </div>
+      <!-- ./wrapper -->
+
+      <!-- jQuery 2.2.3 -->
+      <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+      <!-- Bootstrap 3.3.6 -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <!-- SlimScroll -->
+      <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+      <!-- FastClick -->
+      <script src="plugins/fastclick/fastclick.js"></script>
+      <!-- AdminLTE App -->
+      <script src="dist/js/app.min.js"></script>
+      <!-- AdminLTE for demo purposes -->
+      <script src="dist/js/demo.js"></script>
+      </body>
+      </html>

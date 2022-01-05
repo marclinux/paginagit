@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Guía de git | Manual git</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bootstrap/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bootstrap/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="bootstrap/css/hoja_estilo.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+  <header class="main-header" style="position:fixed">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Guía git</b></span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <a href="#"  data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </nav>
+  </header>
+
+
+
+
+
+  <!-- Left side column. contains the sidebar -->
+    <aside class="main-sidebar">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar" style="position:fixed">
+        <ul class="sidebar-menu">
+          <li class="header"></li>
+          <!--OPCION EMPEZANDO-->
+          <li class="treeview">
+            <a href="index.html">
+               <span>Empezando</span>
+            </a>
+          </li>
+          <li class="treeview">
+            <a href="guardarCambios.html">
+              <span>Guardando Cambios</span>
+            </a>
+          </li>
+          <!--OPCION EMPEZANDOS-->
+
+          <!--OPCION INSPECCIONANDO UN REPOSITORIO-->
+          <li class="treeview">
+            <a href="inspeccionando.html">
+              <span>Inspeccionando un repositorio</span>
+            </a>
+          </li>
+
+          <!--TERMINA OPCION INSPECCIONANDO UN REPOSITORIO-->
+
+          <!-- OPCION VIENDO COMMITS ANTERIORES -->
+          <li class="treeview active">
+            <a href="viendoCommits.html">
+              <span>Viendo commits anteriores</span>
+            </a>
+          </li>
+         <!--TERMINA OPCION VIENDO COMMITS ANTERIORES -->
+
+          <!--OPCION DESHACIENDO CAMBIOS-->
+          <li class="treeview">
+            <a href="deshacerCambios.html">
+              <span>Deshaciendo cambios</span>
+            </a>
+          </li>
+          <!-- TERMINA OPCION DESHACIENDO CAMBIOS -->
+
+          <!--OPCION COLABORADORES-->
+          <li class="treeview menu-open active">
+            <a href="sincronizar.html">
+              <span>Colaboradores</span>
+            </a>
+            <ul class="treeview-menu menu-open active">
+              <li><a href="sincronizar.html"> sincronizar</a>
+                <ul class="treeview menu-open active">
+                  <li><a href="#git_remote">git remote</a></li>
+                  <li><a href="#git_fetch">git fetch</a></li>
+                  <li><a href="#git_pull">git pull</a></li>
+                  <li><a href="#git_push">git push</a></li>
+                </ul>
+                </li>
+              <li><a href="usar-ramas.html"> usando ramas</a>
+              </li>
+
+              <li><a href="flujo-trabajo.html">comparación de flujo de trabajo</a></li>
+            </ul>
+          </li>
+          <!-- TERMINA OPCION COLABORADORES -->
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+  <!-- =============================================== -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+
+
+
+
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="col-lg-12 text-center">
+                          <h1><b>
+                              <br>Sincronizar
+                          </b></h1>
+                            <img src="img/sincronizar.svg" alt="sincronizar imagen" />
+                       </div>
+                    </div>
+                </div>
+                  <div class="col-lg-11">
+                            <div class="panel-body">
+                              <div id="git_remote">
+                                <br><h2>
+                                   git remote
+                                 </h2><br>
+                              <p class="lead">
+                                El comando <span class="textoCodigo">git remote</span> permite crear, ver y eliminar las conexiones remotas con otros
+                                repositorios. Las conexiones remotas son más como marcadores en lugar de enlaces directos
+                                 a otros repositorios. En lugar de proporcionar acceso en tiempo real a otro repositorio,
+                                  sirven como nombres que pueden utilizarse para hacer referencia a una URL.
+                              </p>
+                              <p class="lead">
+                                Por ejemplo, la siguiente imagen muestra dos conexiones remotas desde tu repositorio con
+                                el repositorio central y el repositorio de otro desarrollador.En lugar de hacer referencia a
+                                ellos por sus URL completas,puedes pasar el origen y Juan puede acceder directamente con otros comandos de Git.
+                              </p>
+                              <div class="col-lg-12 text-center">
+                                 <img src="img/remote.svg" alt="git remote imagen" />
+                              </div>
+                              <br>
+                              <h3>
+                                Uso
+                              </h3>
+                              <br>
+                              <div class="col-lg-12 alert alert-dismissible box-header">
+                                <code>
+                                     git remote
+                                </code>
+                              </div>
+                              <p class="lead">
+                                <br>Lista las conexiones remotas que tienes para otras conexiones remotas
+                              </p>
+                              <div class="col-lg-12 alert alert-dismissible box-header">
+                                <code>
+                                  git remote -v
+                                </code>
+                              </div>
+                              <p class="lead">
+                                Es igual al comando anterior, pero incluye la URL de cada conexión.
+                              </p>
+                              <div class="col-lg-12 alert alert-dismissible box-header">
+                                <code>
+                                  git remote add &#60;nombre&#62; &#60;url&#62;
+                                </code>
+                              </div>
+                              <p class="lead">
+                                <br> Crea una nueva conexión a un repositorio remoto. Después de agregar la conexión remota,
+                                podrás utilizar &#60;nombre&#62; como un atajo conveniente para &#60;url&#62; en otros comandos
+                                de Git.
+                              </p>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                  <code>
+                                    git remote rm &#60;nombre&#62;
+                                  </code>
+                                </div>
+                                <p class="lead">
+                                  <br>Elimina la conexión remota al repositorio  llamado &#60;nombre&#62;
+                                </p>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                  <code>
+                                    git remote rename &#60;nombre anterior&#62; &#60;nuevo nombre&#62;
+                                  </code>
+                                </div>
+                                <p class="lead">
+                                  <br>Renombra una conexión remota de &#60;nombre anterior&#62; a &#60;nuevo nombre&#62;
+                                </p>
+                              </div>
+                              <div id="git_fetch">
+                                <br>
+                                  <h2>git fetch</h2>
+                                <br>
+                                <p class="lead">
+                                  El comando <span class="textoCodigo">git fetch </span> importa los commits de un repositorio remoto
+                                  a tu repositorio local. Los commits resultantes se almacenan como ramas remotas.
+                                  Esto da la posibilidad de revisar los cambios antes de su integración en la copia del proyecto.
+                                </p>
+                                <br>
+                                <h3>Uso</h3>
+                                <br>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                  <code>
+                                    git fetch &#60;remote&#62;
+                                  </code>
+                                </div>
+                                <p class="lead">
+                                  Recupera todas las ramas del repositorio.
+                                  También descarga todos los commits y archivos requeridos desde otro repositorio.
+                                </p>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                  <code>
+                                    git fetch &#60;remote&#62; &#60;rama&#62;
+                                  </code>
+                                </div>
+                                <p class="lead">
+                                  Es igual al comando anterior, pero sólo recupera la rama específica.
+                                </p>
+                                <br>
+                                <h3>Ejemplo</h3>
+                                <br>
+                                <p class="lead">
+                                  En este ejemplo nos guía por el típico workflow para la
+                                  sincronización de tu repositorio local con la rama master del repositorio central.
+                                </p>
+                                <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                <code class="codigoResultado">
+                                  git fetch origin
+                                </code>
+                              </div>
+                              <p class="lead">
+                                Esto mostrará las ramas que han sido descargadas:
+                              </p>
+                              <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                              <code class="codigoResultado">
+                                a1e8fb5..45e66a4 master -> origin/master <br>
+                                a1e8fb5..9e8ab1c develop -> origin/develop  <br>
+                                * [new branch] some-feature -> origin/some-feature <br>
+                              </code>
+                            </div>
+                            <p class="lead">
+                            Los commits de estas nuevas ramas remotas aparecen como cuadrados en lugar
+                            de círculos en el siguiente
+                            diagrama. Como puede ver, <span class="textoCodigo">git fetch</span> le da acceso a toda la estructura
+                            de la rama de otro repositorio.
+                            </p>
+                            <div class="col-lg-12 text-center">
+                               <img src="img/fetch_ejemplo.svg" alt="git remote imagen" />
+                            </div>
+                            <p class="lead">
+                              Puede ver que commits han sido agregados en el upstream master, puedes ejecutar
+                              un <span class="textoCodigo">git log</span> usando <span class="textoCodigo">origin/master</span> como un filtro.
+                            </p>
+                            <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                            <code class="codigoResultado">
+                              git log --oneline master...origin/master
+                            </code>
+                          </div>
+                          <p class="lead">
+                            Para aprobar los cambios y combinarlos dentro tu rama master local con los
+                            siguiente comandos:
+                          </p>
+                          <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                          <code class="codigoResultado">
+                            git checkout master <br>
+                            git log origin/master
+                          </code>
+                        </div>
+                        <p class="lead">
+                          Entonces podemos usar <span class="textoCodigo">git merge origin master</span>
+                        </p>
+                        <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                        <code class="codigoResultado">
+                          git merge origin/master
+                        </code>
+                      </div>
+                      <p class="lead">
+                        Las ramas origin/master y master ahora apuntan al mismo commit y está
+                        sincronizado con los desarrollos de upstream.
+                      </p>
+                      </div>
+
+                              <div id="git_pull">
+                                <br>
+                                  <h2> git pull</h2>
+                                  <br>
+                                  <p class="lead">
+                                    Une los cambios upstream dentro de tu repositorio local es una tarea común en
+                                    Git basado en colaboraciones de workflows. Sabemos que esto se hace con <span class="textoCodigo">git fetch</span>
+                                    seguido por <span class="textoCodigo">git merge</span>, pero <span class="textoCodigo">git pull</span> toma estos dos dentro de un único comando.
+                                  </p>
+                                  <br>
+                                  <h3>
+                                    Uso
+                                  </h3>
+                                  <br>
+                                  <div class="col-lg-12 alert alert-dismissible box-header">
+                                    <code>
+                                      git pull &#60;remote&#62;
+                                    </code>
+                                  </div>
+                                  <p class="lead">
+                                    Pull permite actualizar un repositorio local con un repositorio remoto.
+                                    Este comando ejecuta un <span class="textoCodigo">git fetch</span> seguido de un <span class="textoCodigo">git merge</span>; busca la copia
+                                    remota especificada de la rama actual e inmediatamente la fusiona con la copia local.
+                                    Esto es lo mismo que:
+                                  </p>
+                                  <div class="col-lg-12 alert alert-dismissible box-header">
+                                    <code>
+                                      git fetch &#60;remote&#62;
+                                    </code>
+                                  </div>
+                                  <p class="lead">
+                                    seguida por <br>
+                                  </p>
+                                  <div class="col-lg-12 alert alert-dismissible box-header"  >
+                                    <code>
+                                      git merge origin/&#60;current-branch&#62;
+                                    </code>.
+                                  </div>
+                                    <p class="lead">
+                                      El siguiente ejemplo muestra cómo sincronizar con la rama master del repositorio central:
+                                    </p>
+                                    <div class="col-lg-12 alert alert-dismissible box-header">
+                                      <code>
+                                        git checkout master <br>
+                                        git pull --rebase origin
+                                      </code>
+                                    </div>
+                                    <p class="lead">
+                                      <br>
+                                      Esto simplemente mueve los cambios locales en la parte superior de lo que los demás
+                                       ya han contribuido.
+                                     </p>
+                              </div>
+                              <div id="git_push">
+                                <br>
+                                <h2 class="">git push</h2>
+                                <br>
+                                <p class="lead">
+                                  Permite transferir commits de tu repositorio local a un  repositorio remoto.Es la
+                                  contraparte de <span class="textoCodigo">git fetch</span> pero  busca importar commits para ramas locales, push exporta
+                                  commits para las ramas remotas.Tiene el potencial
+                                  para sobrescribir los cambios, por lo que debes de tener cuidado de cómo lo uses.
+                                </p>
+                                <br>
+                                <h3>
+                                  Uso
+                                </h3>
+                                <br>
+                                <div class="col-lg-12 alert alert-dismissible box-header">
+                                <code>
+                                      git push &#60;remote&#62; &#60;rama&#62;
+                                </code>
+                                  </div>
+                                    <p class="lead">
+                                      <br>
+                                      Para guardar los cambios a tu repositorio remoto escriba:<br>
+                                    </p>
+                                    <div class="col-lg-12 alert alert-dismissible box-header">
+                                    <code>
+                                     git push origin master
+                                    </code>
+                                  </div>
+
+                                    <p class="lead">
+                                    <br>Si deseas realizar los cambios en otra rama simplemente cambia master por el nombre de la rama.<br>
+                                    </p>
+                                     <br>
+                                      <h3>
+                                        Ejemplo
+                                      </h3>
+                                      <br>
+                                      <p class="lead">
+                                        El siguiente ejemplo describe uno de los métodos estándar para la publicación de contribuciones
+                                        locales para el depósito central. Primero, debes estar seguro de que su master local está al día para
+                                         buscar la copia del repositorio central y el rebase de los cambios en la parte superior de ellos.
+                                         El reajuste interactivo es también una buena oportunidad para limpiar sus commit antes de compartirlos.
+                                         A continuación, el comando <span class="textoCodigo">git push </span>
+                                        envía todas las confirmaciones del master local al repositorio central.
+                                      </p>
+                                      <div class="alert alert-dismissible  bg-black-active color-palette divConsola">
+                                      <code class="codigoResultado">
+                                        git checkout master <br>
+                                        git fetch origin mastergit rebase -i origin/master <br>
+                                        <span>#comentario </span> <br>
+                                        git push origin master
+                                      </code>
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                       <h4>Siguiente</h4>
+
+                                        <a href="usar-ramas.html">
+                                          <img src="img/rama.svg" alt="rama imagen"  />
+                                        </a>
+                                        <h4> Usando ramas</h4>
+                                   </div>
+                              </div>
+                            </div>
+                    </div>
+                </div>
+              </section>
+            </div>
+                <!-- /.row -->
+                <footer class="main-footer">
+                  <strong>Copyright &copy; 2016</strong>
+                </footer>
+
+                <!-- Add the sidebar's background. This div must be placed
+                     immediately after the control sidebar -->
+                <div class="control-sidebar-bg"></div>
+              </div>
+              <!-- ./wrapper -->
+
+              <!-- jQuery 2.2.3 -->
+              <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+              <!-- Bootstrap 3.3.6 -->
+              <script src="bootstrap/js/bootstrap.min.js"></script>
+              <!-- SlimScroll -->
+              <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+              <!-- FastClick -->
+              <script src="plugins/fastclick/fastclick.js"></script>
+              <!-- AdminLTE App -->
+              <script src="dist/js/app.min.js"></script>
+              <!-- AdminLTE for demo purposes -->
+              <script src="dist/js/demo.js"></script>
+              </body>
+              </html>
