@@ -1,332 +1,379 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Guía de git | Manual git</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="bootstrap/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="bootstrap/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/git.css">
+    <link rel="stylesheet" href="css/expea.css">
+    <link rel="icon" type="image/png" href="Favicon.ico" sizes="16x16">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">    
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vertical.css" rel="stylesheet">
+    <title>Guía Rápida Git</title>
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper" >
 
-  <header class="main-header" style="position:fixed; width:100%">
-    <!-- Logo -->
-    <a href="index.html" class="logo">
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Guía git</b></span>
+<body>
+  <nav class="navbar navbar-dark sticky-top  navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="index.html">Guía Rápida Git</a>
+    <a class="justify-content-end">
+      <ul class="navbar-nav px-3">
+        <li href="index.html" class="nav-item text-nowrap">
+          <img href="index.html" src="imgs/Expea33.png"
+        </li>
+      </ul>
     </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top"   >
-      <!-- Sidebar toggle button-->
-      <a href="#" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-    </nav>
-  </header>
-
-
-  <!-- Left side column. contains the sidebar -->
-    <aside class="main-sidebar" role="navigation">
-      <!-- sidebar: style can be found in sidebar.less -->
-      <section class="sidebar" style="position:fixed">
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu">
-          <li class="header"></li>
-          <!--OPCION EMPEZANDO-->
-          <li class="treeview menu-open active">
-            <a href="index.html">
-               <span>Empezando</span>
-            </a>
-            <ul class="treeview-menu">
-                <li><a href="index.html">Creación de un repositorio</a></li>
-                <li><a href="#git_init">git init</a></li>
-                <li><a href="#git_clone">git clone</a></li>
-                <li><a href="#git_config">git config</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="guardarCambios.html">
-              <span>Guardando Cambios</span></a>
-          </li>
-          <!--OPCION EMPEZANDOS-->
-
-          <!--OPCION INSPECCIONANDO UN REPOSITORIO-->
-          <li class="treeview">
-            <a href="inspeccionando.html">
-              <span>Inspeccionando un repositorio</span>
-            </a>
-          </li>
-          <!--TERMINA OPCION INSPECCIONANDO UN REPOSITORIO-->
-
-          <!-- OPCION VIENDO COMMITS ANTERIORES -->
-          <li class="treeview">
-            <a href="viendoCommits.html">
-              <span>Viendo commits anteriores</span>
-            </a>
-          </li>
-         <!--TERMINA OPCION VIENDO COMMITS ANTERIORES -->
-
-          <!--OPCION DESHACIENDO CAMBIOS-->
-          <li class="treeview">
-            <a href="deshacerCambios.html">
-              <span>Deshaciendo cambios</span>
-            </a>
-          </li>
-          <!-- TERMINA OPCION DESHACIENDO CAMBIOS -->
-
-          <!--OPCION COLABORADORES-->
-          <li class="treeview">
-            <a href="sincronizar.html">
-              <span>Colaboradores</span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="sincronizar.html"> sincronizar</a>
-                </li>
-              <li><a href="usar-ramas.html"> usando ramas</a>
-              </li>
-              <li><a href="flujo-trabajo.html"><span>comparación de flujo de trabajo</span></a></li>
-            </ul>
-          </li>
-          <!-- TERMINA OPCION COLABORADORES -->
-        </ul>
-      </section>
-      <!-- /.sidebar -->
-    </aside>
-
-  <!-- =============================================== -->
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <br>
-                      <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <h1><b>Creación de un repositorio</b></h1>
-                            <a href="guardarCambios.html">
-                           <img  width="40%" src="img/empezando/repo.svg" alt="repositorio" />
-                        </a>
-
-                        </div>
-                      </div>
-                    <br>
-                    <p id="git_init" class="lead">Esta guía proporciona una lista comandos importantes  para la creación de un proyecto en git, además, se muestran algunos comandos cotidianos. </p>
-                    <h2 ><b>git init</b></h2>
-                    <br>
-                    <p class="lead">El comando <b>git init</b> ayuda a inicializar el directorio que alojará nuestro proyecto creando una subcarpeta .git, con esto podremos ejecutar todos comandos pertenecientes a git.</p>
-                    <br>
-                     <div class="row">
-                       <div class="col-lg-12">
-                         <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2">
-                          <p><code style="background-color:transparent;color:#000000"><b>git init </b></code></p>
-                        </div>
-                      </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto flex-column vertical-nav">
+        <li class="nav-item dropdown ">
+          <a class="nav-link active dropdown-toggle" data-toggle="dropdown"  href="index.html">
+            <ion-icon style="font-size:20px" src="icons/home-outline.svg"></ion-icon>
+            Empezando <span class="sr-only">(current)</span>
+          </a>
+          <div class="dropdown-menu displa">
+              <a class="nav-item dropdown-item" href="index.html">Creación de un repositorio</a>
+              <a class="dropdown-item" href="#git_init">git init</a>
+              <a class="dropdown-item" href="#git_clone">git clone</a>
+              <a class="dropdown-item" href="#git_config">git config</a>
+          </div>
+              
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="guadarCambios.html">
+            <ion-icon style="font-size:20px" src="icons/save-outline.svg"></ion-icon>
+            Guardando Cambios
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inspeccionando.html">
+            <ion-icon style="font-size:24px" src="icons/create-outline.svg"></ion-icon>
+            Inspeccionando un repositorio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="viendoCommits.html">
+            <ion-icon style="font-size:24px" src="icons/search-circle-outline.svg"></ion-icon>
+            Viendo Commits anteriores
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="deshacerCambios.html">
+            <ion-icon style="font-size:24px" src="icons/git-compare-outline.svg"></ion-icon>
+            Deshacer cambios
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="sincronizar.html">
+            <ion-icon style="font-size:24px" src="icons/layers-outline.svg"></ion-icon>
+            Sincronizar 
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="coloboradores.html">
+            <ion-icon style="font-size:24px" src="icons/share.svg"></ion-icon>
+            Usando Ramas 
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="flujodetrabajo.html">
+            <ion-icon style="font-size:24px" src="icons/file-earmark-code.svg"></ion-icon>
+            Flujo de trabajo de Gitflow 
+          </a>
+        </li>
+        
+      </ul>
+  
+    </div>
+  </nav>
+   
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+        
+        
+        <div class="menu">
+            
+                <div class="row">
+                    <div class="col-lg-12 text-center titulo">
+                        <h1 id="git_add"><b>Creación de un repositorio</b></h1>
+                        <img width="50%" src="imgs/repositorio.svg" alt="repositorio" />
                     </div>
-                      <br>
-                    <!-- ####  Ejemplo-->
-                    <div class="row" >
-                            <div class="col-lg-12" >
-                                <h3><i>Ejemplo</i></h3>
-                                <div style="padding-right:10%; padding-left:10%">
-                                  <p class="lead">Suponiendo que ya tienes un proyecto en tu computadora y quieres inicializar el repositorio, las pasos que se tienen que hacer son los siguientes:</p>
-                                  <div class="row">
-
-                                    <div class=" alert alert-dismissible  bg-black-active color-palette">
-                                        <p><code style="background-color:transparent;color:#f5f5f5"><b>$ cd /home/usuario/Documentos/gitProject<br>
-                                        $ ls<br>
-                                        file1.c file2.c file3.c file4.c file4.c
-                                        <span style="color:#3C763D">morefiles</span><br>
-                                        $ git init<br>
-                                        Initialized empty Git repository in /home/usuario/Documentos/gitProject
-                                      </b>
-                                     </code></p>
-                                    </div>
-                                  </div>
-                                  <p class="lead">Hasta este momento tenemos inicializado el repositorio, y nos dice que es un repositorio vacío, esto pasa porque los archivos aún no son cargados al repositorio local.</p>
-                                  <p class="lead"> Ahora veremos como agregar los archivos existentes en el directorio, utilizaremos el comando <i>git add *</i>, con esto el repositorio hará el seguimiento de estos archivos y utilizaremos <i>git status</i> para ver que cambios se han hecho en el repositorio local.</p>
-                                  <div class="row">
-                                    <div class="alert alert-dismissible  bg-black-active color-palette">
-                                      <p>
-                                        <code style="background-color:transparent;color:#f5f5f5"><b>$ git add *<br>
-                                        $ git status<br>
-                                        en la rama master<br><br>
-                                        commit inicial<br><br>
-                                        cambios para hacer commit:<br>
-                                        (use «git rm --cached &#60;archivo&#62;...&#62;&#62; para eliminar stage)<br>
-                                        <span style="padding-left:3%"></span><br>
-                                        <span style="color:#3C763D">new file:   file1.c</span><br>
-                                        <span style="color:#3C763D">new file:   file2.c</span><br>
-                                        <span style="color:#3C763D">new file:   file3.c</span><br>
-                                        <span style="color:#3C763D">new file:   file5.c</span><br>
-                                        <span style="color:#3C763D">new file:   file6.c</span><br>
-                                        <span style="color:#3C763D">new file:  morefiles/file1.c</span><br>
-                                        <span style="color:#3C763D">new file:  morefiles/file2.c</span><br>
-                                        <span style="color:#3C763D">new file:  morefiles/file3.c</span><br>
-                                        <span style="color:#3C763D">new file:  morefiles/file5.c</span><br>
-                                        <span style="color:#3C763D">new file:  morefiles/file6.c</span><br>
-                                        </b>
-                                       </code>
-                                     </p>
-                                      <span  id="git_clone"></span>
-                        </div>
-                                </div>
-                            </div>
-                            </div>
-
-                      </div>
-
-                    <!--  -->
-                    <h2 ><b>git clone</b></h2>
-                    <br>
-                    <p class="lead">Git clone nos sirve para copiar un repositorio existente, creando  automáticamente una conexión remota llamada origin que señala al proyecto original, gracias a esta conexión podemos  interactuar con el repositorio central.</p>
-                     <br>
-                     <div class="row">
-                       <div class="col-lg-12">
-                       <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2">
-                           <p><code style="background-color:transparent;color:#000000"><b>git clone &#60;repo&#62;</b></code></p>
-                        </div>
-                      </div>
-                    </div>
-                      <!-- git clone -->
-                       <div class="row" >
-                            <div class="col-lg-12" >
-                                <h3><i>Ejemplo</i></h3>
-                                <div style="padding-right:10%; padding-left:10%">
-                                  <p class="lead">Si tenemos el repositorio en la página oficial de git, puedes simplemente clonar el repositorio, lo único que necesitas es la url del repositorio, la misma página git te especifíca la url. </p>
-                                  <div class="row">
-                                    <div class="alert alert-dismissible  bg-black-active color-palette">
-                                        <p><code style="background-color:transparent;color:#f5f5f5"><b>$ git clone https://gitlab.com/usuario/gitProject.git<br>
-                                          Clonar en «gitProject»...<br>
-                                          Username for 'https://gitlab.com': user_email@hotmail.com<br>
-                                          Password for 'https://faby_ram01@hotmail.com@gitlab.com': <br>
-                                          remote: Counting objects: 4, done. <br>
-                                          remote: Compressing objects: 100% (3/3), done.<br>
-                                          remote: Total 4 (delta 1), reused 0 (delta 0)<br>
-                                          Unpacking objects: 100% (4/4), done.<br>
-                                          Checking connectivity... hecho.
-                                      </b>
-                                     </code></p>
-                                    </div>
-                                  </div>
-                                  <p class="lead"  id="git_config" >Podemos entrar al directorio y ejecutar un <i>ls</i> para verificar que todos los archivos del repositorio se encuentren en la carpeta local del repositorio.</p>
-                                </div>
-                            </div>
-                        </div>
-                      <!-- termina ejemplo de git clone-->
-
-
-                    <h2><b>git config</b></h2>
-                    <br>
-                    <p class="lead">Este comando le permite configurar la instalación de git, en este comando se puede definir desde la información del usuario hasta las referencias para el comportamiento del repositorio. A continuación se muestran varias opciones comunes de configuración.</p>
-                    <br>
-
-                    <h4><b>git config user.name </b>&#60;name&#62;</h4>
-                    <p class="lead">Define el nombre del usuario que se utilizará para generar todas las confirmaciones en el repositorio. Por lo general, tendrá que utilizar <i> --global</i> para establecer las opciones de configuracion del usuario.</p>
-
-                    <h4 class="lead">Define el nombre del usuario: </h4>
-                    <br>
-                   <div class="row">
-                     <div class="col-lg-12">
-                     <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2">
-                         <p><code style="background-color:transparent;color:#000000"><b>git config user.name &#60;name&#62;</b></code></p>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="lead">Define el email del usuario:</h4>
-                    <br>
-                    <div class="row">
-                      <div class="col-lg-12">
-                      <div  class="alert alert-dismissible box-header" style="background-color:#7CB2D2" >
-                          <p><code style="background-color:transparent;color:#000000"><b>git config --global user.email &#60;;email&#62;</b></code></p>
-                        </div>
-                      </div>
-                    </div>
-                      <!-- ejmeplo de git config -->
-
-                       <div class="row" >
-                            <div class="col-lg-12" >
-                                <h3><i>Ejemplo</i></h3>
-                                <div style="padding-right:10%; padding-left:10%">
-                                  <p class="lead">Nos posicionamos en el directorio y tecleamos lo siguiente, los valores de email y usuario deberán ser con los que se registraron en gitlab.</p>
-                                  <div class="row">
-                                    <div class="alert alert-dismissible bg-black-active color-palette ">
-                                        <p><code style="background-color:transparent;color:#f5f5f5"><b>$ git config --global user.name "usuarioGit"<br>
-                                          $git config --global user.email "usuarioGit@hotmail.com"
-
-                                      </b>
-                                     </code></p>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                      <!-- termina ejemplo de git config -->
-                    <br><br>
-                    <br><br>
-                    <div class="row">
-                      <div class="col-lg-12 text-center">
-                        <h5 class="lead">Siguiente</h5>
-                         <a href="guardarCambios.html">  <img style="width:40%" src="img/empezando/guardarC2.svg" alt="guardar cambios" /></a>
-                         <h4 class="lead">Guardando Cambios</h4>
-                      </div>
-                    </div>
-
-                </div>
-
-            </div>
+                </div>                
+            
         </div>
-    </section>
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+        
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                              
+                            <p id="git_init" class="lead">Esta guía proporciona una lista comandos importantes  para la creación de un proyecto en git, además, se muestran algunos comandos cotidianos. </p>
+                            <h2 ><b>git init</b></h2>
+                            <br>
+                            <p class="lead">El comando <b>git init</b> ayuda a inicializar el directorio que alojará nuestro proyecto creando una subcarpeta .git, con esto podremos ejecutar todos comandos pertenecientes a git.</p>
+                            <br>
+                             <div class="row">
+                               <div class="col-lg-12">
+                                 <div class="alert alert-dismissible box-header border" style="background-color:#f8f9fa">
+                                  <p><code style="background-color:transparent;color:#000"><b>git init </b></code></p>
+                                </div>
+                              </div>
+                            </div>
+                              <br>
+                            <!-- ####  Ejemplo-->
+                            <div class="row" >
+                                    <div class="col-lg-12" >
+                                        <h3><i>Ejemplo</i></h3>
+                                        <div style="padding-right:10%; padding-left:10%">
+                                          <p class="lead">Suponiendo que ya tienes un proyecto en tu computadora y quieres inicializar el repositorio, las pasos que se tienen que hacer son los siguientes:</p>
+                                          <div class="row">
+        
+                                            <div class=" alert alert-dismissible  bg-black-active color-palette border" style="background-color: #f8f9fa;">
+                                                <p><code style="background-color:transparent;color:#000"><b>$ cd /home/usuario/Documentos/gitProject<br>
+                                                $ ls<br>
+                                                file1.c file2.c file3.c file4.c file4.c
+                                                <span style="color:#3C763D">morefiles</span><br>
+                                                $ git init<br>
+                                                Initialized empty Git repository in /home/usuario/Documentos/gitProject
+                                              </b>
+                                             </code></p>
+                                            </div>
+                                          </div>
+                                          <p class="lead">Hasta este momento tenemos inicializado el repositorio, y nos dice que es un repositorio vacío, esto pasa porque los archivos aún no son cargados al repositorio local.</p>
+                                          <p class="lead"> Ahora veremos como agregar los archivos existentes en el directorio, utilizaremos el comando <i>git add *</i>, con esto el repositorio hará el seguimiento de estos archivos y utilizaremos <i>git status</i> para ver que cambios se han hecho en el repositorio local.</p>
+                                          <div class="row">
+                                            <div class="alert alert-dismissible  bg-black-active color-palette border" style="background-color: #f8f9fa;">
+                                              <p>
+                                                <code style="background-color:transparent;color:#000"><b>$ git add *<br>
+                                                $ git status<br>
+                                                en la rama master<br><br>
+                                                commit inicial<br><br>
+                                                cambios para hacer commit:<br>
+                                                (use «git rm --cached &#60;archivo&#62;...&#62;&#62; para eliminar stage)<br>
+                                                <span style="padding-left:3%"></span><br>
+                                                <span style="color:#3C763D">new file:   file1.c</span><br>
+                                                <span style="color:#3C763D">new file:   file2.c</span><br>
+                                                <span style="color:#3C763D">new file:   file3.c</span><br>
+                                                <span style="color:#3C763D">new file:   file5.c</span><br>
+                                                <span style="color:#3C763D">new file:   file6.c</span><br>
+                                                <span style="color:#3C763D">new file:  morefiles/file1.c</span><br>
+                                                <span style="color:#3C763D">new file:  morefiles/file2.c</span><br>
+                                                <span style="color:#3C763D">new file:  morefiles/file3.c</span><br>
+                                                <span style="color:#3C763D">new file:  morefiles/file5.c</span><br>
+                                                <span style="color:#3C763D">new file:  morefiles/file6.c</span><br>
+                                                </b>
+                                               </code>
+                                             </p>
+                                              <span  id="git_clone"></span>
+                                </div>
+                                        </div>
+                                    </div>
+                                    </div>
+        
+                              </div>
+        
+                            <!--  -->
+                            <h2 ><b>git clone</b></h2>
+                            <br>
+                            <p class="lead">Git clone nos sirve para copiar un repositorio existente, creando  automáticamente una conexión remota llamada origin que señala al proyecto original, gracias a esta conexión podemos  interactuar con el repositorio central.</p>
+                             <br>
+                             <div class="row">
+                               <div class="col-lg-12">
+                               <div class="alert alert-dismissible box-header border" style="background-color:#f8f9fa">
+                                   <p><code style="background-color:transparent;color:#000"><b>git clone &#60;repo&#62;</b></code></p>
+                                </div>
+                              </div>
+                            </div>
+                              <!-- git clone -->
+                               <div class="row" >
+                                    <div class="col-lg-12" >
+                                        <h3><i>Ejemplo</i></h3>
+                                        <div style="padding-right:10%; padding-left:10%">
+                                          <p class="lead">Si tenemos el repositorio en la página oficial de git, puedes simplemente clonar el repositorio, lo único que necesitas es la url del repositorio, la misma página git te especifíca la url. </p>
+                                          <div class="row">
+                                            <div class="alert alert-dismissible  bg-black-active color-palette border" style="background-color: #f8f9fa;">
+                                                <p><code style="background-color:transparent;color:#000"><b>$ git clone https://gitlab.com/usuario/gitProject.git<br>
+                                                  Clonar en «gitProject»...<br>
+                                                  Username for 'https://gitlab.com': user_email@hotmail.com<br>
+                                                  Password for 'https://faby_ram01@hotmail.com@gitlab.com': <br>
+                                                  remote: Counting objects: 4, done. <br>
+                                                  remote: Compressing objects: 100% (3/3), done.<br>
+                                                  remote: Total 4 (delta 1), reused 0 (delta 0)<br>
+                                                  Unpacking objects: 100% (4/4), done.<br>
+                                                  Checking connectivity... hecho.
+                                              </b>
+                                             </code></p>
+                                            </div>
+                                          </div>
+                                          <p class="lead"  id="git_config" >Podemos entrar al directorio y ejecutar un <i>ls</i> para verificar que todos los archivos del repositorio se encuentren en la carpeta local del repositorio.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                              <!-- termina ejemplo de git clone-->
+        
+        
+                            <h2><b>git config</b></h2>
+                            <br>
+                            <p class="lead">Este comando le permite configurar la instalación de git, en este comando se puede definir desde la información del usuario hasta las referencias para el comportamiento del repositorio. A continuación se muestran varias opciones comunes de configuración.</p>
+                            <br>
+        
+                            <h4><b>git config user.name </b>&#60;name&#62;</h4>
+                            <p class="lead">Define el nombre del usuario que se utilizará para generar todas las confirmaciones en el repositorio. Por lo general, tendrá que utilizar <i> --global</i> para establecer las opciones de configuracion del usuario.</p>
+        
+                            <h4 class="lead">Define el nombre del usuario: </h4>
+                            <br>
+                           <div class="row">
+                             <div class="col-lg-12">
+                             <div class="alert alert-dismissible box-header border" style="background-color:#f8f9fa">
+                                 <p><code style="background-color:transparent;color:#000"><b>git config user.name &#60;name&#62;</b></code></p>
+                                </div>
+                              </div>
+                            </div>
+                            <h4 class="lead">Define el email del usuario:</h4>
+                            <br>
+                            <div class="row">
+                              <div class="col-lg-12">
+                              <div  class="alert alert-dismissible box-header border" style="background-color:#f8f9fa" >
+                                  <p><code style="background-color:transparent;color:#000"><b>git config --global user.email &#60;email&#62;</b></code></p>
+                                </div>
+                              </div>
+                            </div>
+                              <!-- ejmeplo de git config -->
+        
+                               <div class="row" >
+                                    <div class="col-lg-12" >
+                                        <h3><i>Ejemplo</i></h3>
+                                        <div style="padding-right:10%; padding-left:10%">
+                                          <p class="lead">Nos posicionamos en el directorio y tecleamos lo siguiente, los valores de email y usuario deberán ser con los que se registraron en gitlab.</p>
+                                          <div class="row">
+                                            <div class="alert alert-dismissible bg-black-active color-palette border" style="background-color: #f8f9fa;">
+                                                <p><code style="background-color:transparent;color:#000"><b>$ git config --global user.name "usuarioGit"<br>
+                                                  $git config --global user.email "usuarioGit@hotmail.com"
+        
+                                              </b>
+                                             </code></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              <!-- termina ejemplo de git config -->
+                            
+                              <div class="row">
+                                
+                                <div class="col-sm-6">
+                                  <div class="container">
+                                    
+                                  </div>
+                                </div>
+                                <div class="col-sm-6">
+                                  <div class="container text-center">
+                                    
+                                    <p class="lead">
+                                      Guardando Cambios
+                                    </p>
+                                    <button type="button" class="btn btn-danger">
+                                        <a href="guadarCambios.html" style="color: #f8f9fa;"> Siguiente</a>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <br>
+                              <br>
+                            
+        
+                        </div>
+        
+                    </div>
+                </div>
+            </section>
+          </div> 
+
+      </main>
+<div class="pie">
+  <div class="row">
+      <div class="col-md-4 text-center">
+          <div class="col-pie">
+              <a href="empresa.html">Quiénes somos</a>
+              <br>
+              <a href="http://expea.mx/empresa/web/index.php?r=/interesados/tienda">Contacto</a>
+              <br>
+              <a href="http://expea.mx/empresa/web/index.php?r=/interesados/create">Programadores</a>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="col-pie">
+              <h7>Excelencia en Programación, Educación y Asesoría</h7>
+              <br>
+              <h7>Av. Tigre No 119 Fraccionamiento La Cueva del Jaguar</h7>
+              <br>
+              <h7>C.P. 29096 Tuxtla Gutiérrez, Chiapas, México</h7>
+          </div>
+      </div>
+      <div class="col-md-4 text-center">
+          <div class="col-pie">
+              <a href="https:///twitter.com/expeasoft"><img src="imgs/twitter-circle-white.png" alt="twitter"
+                      width="40" height="40"></a>
+              <a href="https://www.facebook.com/expeasoft/"><img src="imgs/f-logo.png" alt="facebook" width="40"
+                      height="40"></a>
+              <a href="https://expeasoft.blogspot.com"><img src="imgs/blogger.png" alt="blogger" width="40"
+                  height="40"></a>
+                  <p>&copy; Expea 2021 </p>
+          </div>
+      </div>
   </div>
-  <!-- /.content-wrapper -->
-
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2016</strong>
-  </footer>
-
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
 </div>
-<!-- ./wrapper -->
 
-<!-- jQuery 2.2.3 -->
-<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('.top-navbar').addClass('fixed-top');
+                $('.top-navbar').removeClass('navbar-redondeado');
+            } else {
+                $('.top-navbar').removeClass('fixed-top');
+                $('.top-navbar').addClass('navbar-redondeado');
+            }
+        });
+    </script>
 </body>
+
 </html>

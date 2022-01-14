@@ -1,268 +1,323 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Guía de git | Manual git</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="bootstrap/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="bootstrap/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/git.css">
+    <link rel="stylesheet" href="css/expea.css">
+    <link rel="icon" type="image/png" href="Favicon.ico" sizes="16x16">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">    
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vertical.css" rel="stylesheet">
+    <title>Guía Rápida Git</title>
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper" >
 
-  <header class="main-header" style="position:fixed; width:100%">
-    <!-- Logo -->
-    <a href="index.html" class="logo">
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Guía git</b></span>
+<body>
+  <nav class="navbar navbar-dark sticky-top  navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="index.html">Guía Rápida Git</a>
+    <a class="justify-content-end">
+      <ul class="navbar-nav px-3">
+        <li href="index.html" class="nav-item text-nowrap">
+          <img href="index.html" src="imgs/Expea33.png"
+        </li>
+      </ul>
     </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top" >
-      <!-- Sidebar toggle button-->
-      <a href="#"  data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-    </nav>
-  </header>
-
-
-  <!-- Left side column. contains the sidebar -->
-    <aside class="main-sidebar" role="navigation">
-      <!-- sidebar: style can be found in sidebar.less -->
-      <section class="sidebar" style="position:fixed">
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu">
-          <li class="header"></li>
-          <!--OPCION EMPEZANDO-->
-          <li class="treeview">
-            <a href="index.html">
-               <span>Empezando</span>
-            </a>
-
-          </li>
-          <li class="treeview">
-            <a href="guardarCambios.html">
-              <span>Guardando Cambios</span>
-            </a>
-
-          </li>
-          <!--OPCION EMPEZANDOS-->
-
-          <!--OPCION INSPECCIONANDO UN REPOSITORIO-->
-          <li class="treeview menu-open active">
-            <a href="inspeccionando.html">
-              <span>Inspeccionando un repositorio</span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="#git_status">git status</a></li>
-              <li><a href="#git_log">git log</a></li>
-            </ul>
-          </li>
-          <!--TERMINA OPCION INSPECCIONANDO UN REPOSITORIO-->
-
-          <!-- OPCION VIENDO COMMITS ANTERIORES -->
-          <li class="treeview">
-            <a href="viendoCommits.html">
-              <span>Viendo commits anteriores</span>
-            </a>
-          </li>
-         <!--TERMINA OPCION VIENDO COMMITS ANTERIORES -->
-
-          <!--OPCION DESHACIENDO CAMBIOS-->
-          <li class="treeview">
-            <a href="deshacerCambios.html">
-              <span>Deshaciendo cambios</span>
-            </a>
-
-          </li>
-          <!-- TERMINA OPCION DESHACIENDO CAMBIOS -->
-
-          <!--OPCION COLABORADORES-->
-          <li class="treeview">
-            <a href="sincronizar.html">
-              <span>Colaboradores</span>
-            </a>
-
-          </li>
-          <!-- TERMINA OPCION COLABORADORES -->
-        </ul>
-      </section>
-      <!-- /.sidebar -->
-    </aside>
-
-  <!-- =============================================== -->
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-
-       <div class="container-fluid">
-
-                <!-- Page Heading -->
-
-
-
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto flex-column vertical-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <ion-icon style="font-size:20px" src="icons/home-outline.svg"></ion-icon>
+            Empezando <span class="sr-only">(current)</span>
+          </a>
+                      
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="guadarCambios.html">
+            <ion-icon style="font-size:20px" src="icons/save-outline.svg"></ion-icon>
+            Guardando Cambios
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="#">
+            <ion-icon style="font-size:24px" src="icons/create-outline.svg"></ion-icon>
+            Inspeccionando un repositorio
+          </a>
+          <div class="dropdown-menu displa">
+              <a class="dropdown-item" href="#git_status">git status</a>
+              <a class="dropdown-item" href="#git_log">git log</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="viendoCommits.html">
+            <ion-icon style="font-size:24px" src="icons/search-circle-outline.svg"></ion-icon>
+            Viendo Commits anteriores
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="deshacerCambios.html">
+            <ion-icon style="font-size:24px" src="icons/git-compare-outline.svg"></ion-icon>
+            Deshacer cambios
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="sincronizar.html">
+            <ion-icon style="font-size:24px" src="icons/layers-outline.svg"></ion-icon>
+            Sincronizar 
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="coloboradores.html">
+            <ion-icon style="font-size:24px" src="icons/share.svg"></ion-icon>
+            Usando Ramas 
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="flujodetrabajo.html">
+            <ion-icon style="font-size:24px" src="icons/file-earmark-code.svg"></ion-icon>
+            Flujo de trabajo de Gitflow 
+          </a>
+        </li>
+        
+      </ul>
+  
+    </div>
+  </nav>
+        
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+        
+        <div class="menu">
+            
                 <div class="row">
-                    <div class="col-lg-12">
-                      <div class="row">
-                            <div class="col-lg-12 text-center">
-                              <br>
-                              <h1 id="git_status"><b>Inspeccionando un repositorio</b></h1>
-                               <img src="img/empezando/inspeccionar.svg" alt="repositorio" width='60%'/>
+                    <div class="col-lg-12 text-center">
+                        <h1 id="#git_status"><b>Inspeccionando un repositorio</b></h1>
+                        <img width="50%" src="imgs/inspeccionar.svg" alt="repositorio" />
+                    </div>
+                </div>                
+            
+        </div>
 
-                            </div>
-                      </div>
-                        <br>
-                        <h2><b>git status</b></h2>
-                        <br>
-                        <p class="lead">Muestra el estado del directorio del trabajo, visualiza los cambios que se han presentado, y los archivos que son rastreados o seguidos por git.</p>
-                        <br>
-                        <p class="lead">Uso: </p>
-                         <div class="row">
-                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2">
-                          <p><code style="background-color:transparent;color:#000000"><b>git status</b></code></p>
-                            </div>
-                          </div>
-                        <br>
-                        <p class="lead">Enlista todos los archivos que se han modificado, agregado o eliminado y no estan seguidos o rastreados por git.</p><br>
-                      <!-- git status -->
-               <div class="row" >
-                    <div class="col-lg-12" >
-                        <h3><i>Ejemplo</i></h3>
-                        <div style="padding-right:10%; padding-left:10%">
-                           <div class="row">
-                             <div class=" alert alert-dismissible  bg-black-active color-palette"><p><code style="background-color:transparent;color:#f5f5f5"><b>
-                                $ git status<br>
-                                en la rama master<br><br>
-                                commit inicial<br><br>
-                                cambios para hacer commit:<br>
-                                (use «git rm --cached &#60;archivo&#62;...&#62;&#62; para eliminar stage)<br></b></code></p>
-                               <p style="padding-left:3%"><code style="background-color:transparent;color:#f5f5f5"><span style="color:#3C763D"><b>new file:   file1.c</b></span><br>
-                                <span style="color:#3C763D"><b>new file:   file2.c</b></span><br>
-                                <span style="color:#3C763D"><b>new file:   file3.c</b></span><br>
-                                <span style="color:#3C763D"><b>new file:   file5.c</b></span><br>
-                                <span style="color:#3C763D"><b>new file:   file6.c</b></span><br>
-                                <span style="color:#3C763D"><b>new file:  morefiles/file1.c</b></span><br>
-                                <span style="color:#3C763D"><b>new file:  morefiles/file2.c</b></span><br>
-                                <span style="color:#3C763D"><b>new file:  morefiles/file3.c</b></span><br>
-                                <span style="color:#3C763D"><b>new file:  morefiles/file5.c</b></span><br>
-                                <span style="color:#3C763D"><b>new file:  morefiles/file6.c</b></span>
-                             </code></p>
-                           </div>
-                        </div>
-                        <p class="lead">En primer lugar nos mostrará en que rama estamos, y como el commit que tenemos fue ejecutado antes de haber agregado todos los archivos al repositorios nos dice que el repositorio está listo para hacer un commit</p>
-                        <p class="lead">En caso de haber archivos no agregados, el mensaje que aparecerá será el siguiente:</p>
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+        
+                <div class="container-fluid">
                     <div class="row">
-                    <div class=" alert alert-dismissible  bg-black-active color-palette"><p  id="git_log"><code style="background-color:transparent;color:#f5f5f5"><b>
-                      $ git status<br>
-                      en la rama master<br><br>
-                      Your branch is up-to-date with 'origin/master'.<br><br>
-                      Archivos sin seguimiento:<br></b></code>
-                     <p style="padding-left:3%"><code style="background-color:transparent;color:#f5f5f5"><b> (use «git rm --cached &#60;archivo&#62;...&#62;&#62; para eliminar stage)</b></code></p>
-                     <p style="padding-left:6%"><code style="background-color:transparent;color:#f5f5f5"> <span style="color:red"><b>new file:   file2.c</b></span></code></p><br>
-
-                    </div>
-                    </div>
-                      </div>
-                  </div>
-              </div>
-            <!-- termina ejemplo de git status-->
-          <br>
-
-                        <h2 ><b>git log</b></h2>
-                        <br>
-                        <p class="lead">El commando <i>git log</i> enlista la historia del proyecto, nos muestra todos los commits que se han hecho al directorio.
-                         </p>
-                         <br>
-                         <div class="row">
-                            <div class="col-lg-12 text-center">
-                               <img  src="img/empezando/status_log.svg" alt="repositorio" width='60%'/>
+                        <div class="col-lg-12">
+                              
+                             <h2 id="git_add"><b>git status</b></h2>
+                            <br>
+                            <p class="lead">Muestra el estado del directorio del trabajo, visualiza los cambios que se han presentado, y los archivos que son rastreados o seguidos por git.</p>
+                            <br>
+                            <p class="lead">Uso:</p>
+                            <br>
+                             <div class="row">
+                               <div class="col-lg-12">
+                                 <div class="alert alert-dismissible box-header border" style="background-color:#f8f9fa">
+                                  <p><code style="background-color:transparent;color:#000"><b>git status </b></code></p>
+                                </div>
+                              </div>
                             </div>
-                         </div>
-                        <br><br>
-                       <p class="lead"> Este comando permite configurar la salida o resultado después de la línea de comando, alguna de estas configuraciones se muestran a continuación:</p>
-                        <br>
-                        <p class="lead">Uso :</p>
-                        <br>
-                         <div class="row">
-                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2">
-                          <p><code style="background-color:transparent;color:#000000"><b>git log</b></code></p>
+                            <p class="lead">Enlista todos los archivos que se han modificado, agregado o eliminado y no estan seguidos o rastreados por git.</p>
+                            <br>
+                              <br>
+                            <!-- ####  Ejemplo-->
+                            <div class="row" >
+                                    <div class="col-lg-12" >
+                                        <h3><i>Ejemplo</i></h3>
+                                        <div style="padding-right:10%; padding-left:10%">
+                                          <div class="row">
+                                            <div class=" alert alert-dismissible  bg-black-active color-palette border" style="background-color: #f8f9fa;"><p><code style="background-color:transparent;color:#000"><b>
+                                                $ git status<br>
+                                                en la rama master<br><br>
+                                                commit inicial<br><br>
+                                                cambios para hacer commit:<br>
+                                                (use «git rm --cached &#60;archivo&#62;...&#62;&#62; para eliminar stage)<br></b></code></p>
+                                               <p style="padding-left:3%"><code style="background-color:transparent;color:#c7143e"><span style="color:#3C763D"><b>new file:   file1.c</b></span><br>
+                                                <span style="color:#3C763D"><b>new file:   file2.c</b></span><br>
+                                                <span style="color:#3C763D"><b>new file:   file3.c</b></span><br>
+                                                <span style="color:#3C763D"><b>new file:   file5.c</b></span><br>
+                                                <span style="color:#3C763D"><b>new file:   file6.c</b></span><br>
+                                                <span style="color:#3C763D"><b>new file:  morefiles/file1.c</b></span><br>
+                                                <span style="color:#3C763D"><b>new file:  morefiles/file2.c</b></span><br>
+                                                <span style="color:#3C763D"><b>new file:  morefiles/file3.c</b></span><br>
+                                                <span style="color:#3C763D"><b>new file:  morefiles/file5.c</b></span><br>
+                                                <span style="color:#3C763D"><b>new file:  morefiles/file6.c</b></span>
+                                             </code></p>
+                                          </div>
+                                          <p class="lead">En primer lugar nos mostrará en que rama estamos, y como el commit que tenemos fue ejecutado antes de haber agregado todos los archivos al repositorios nos dice que el repositorio está listo para hacer un commit.</p>
+                                          <br>
+                                          <p class="lead">En caso de haber archivos no agregados, el mensaje que aparecerá será el siguiente:</p>
+                                            <div class="row">
+                                                <div class=" alert alert-dismissible  bg-black-active color-palette border" style="background-color: #f8f9fa;"><p  id="git_log"><code style="background-color:transparent;color:#000"><b>
+                                                    $ git status<br>
+                                                    en la rama master<br><br>
+                                                    Your branch is up-to-date with 'origin/master'.<br><br>
+                                                    Archivos sin seguimiento:<br></b></code>
+                                                    <p style="padding-left:3%"><code style="background-color:transparent;color:#3C763D"><b> (use «git rm --cached &#60;archivo&#62;...&#62;&#62; para eliminar stage)</b></code></p>
+                                                    <p style="padding-left:6%"><code style="background-color:transparent;color:#f5f5f5"> <span style="color:red"><b>new file:   file2.c</b></span></code></p><br>
+                        
+                                                </div>
+                                            </div>          
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                           
+                
+        
+                            <h2 id="git_commit"><b>git log</b></h2>
+                            <br>
+                            <p class="lead">El commando <i>git log</i> enlista la historia del proyecto, nos muestra todos los commits que se han hecho al directorio.</p><br>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                   <img  src="imgs/status_log.svg" alt="repositorio" width='60%'/>
+                                </div>
+                            </div>
+                            <br>
+                            <p class="lead">Este comando permite configurar la salida o resultado después de la línea de comando, alguna de estas configuraciones se muestran a continuación:</p><br>
+                            <br>
+                            <p class="lead">Uso:</p>
+                            <div class="col-lg-12">
+                              <div class="alert alert-dismissible box-header border" style="background-color:#f8f9fa">
+                               <p><code style="background-color:transparent;color:#000"><b>git log</b></code></p>
+                             </div>
+                           </div>
+                            <p class="lead">Si el resultado que muestra esta línea de comando es demasiada, podemos teclear q para regresar al modo normal de la consola o terminal. </p>
+                            <p class="lead">También de puede delimitar el tamaño o número de commits que regresa <i>git log</i> solo tenemos que ejecutar la siguiente línea de código</p>
+                            <div class="col-lg-12">
+                              <div class="alert alert-dismissible box-header border" style="background-color:#f8f9fa">
+                               <p><code style="background-color:transparent;color:#000"><b>git log -n &#60;limit&#62; </b></code></p>
+                             </div>
+                           </div>
+                           <p class="lead">Donde limit es el número de commits que queremos ver.</p>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                        <br>   
+
+                           <div class="row">                    
+                            <div class="col-sm-6">
+                              <div class="container text-center">
+                                
+                                <p class="lead">
+                                  Inspeccionando un repositorio
+                                </p>
+                                <button type="button" class="btn btn-danger">
+                                  <a href="guadarCambios.html" style="color: #f8f9fa;"> Anterior </a>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="container text-center">
+                                
+                                <p class="lead">
+                                  Viendo Commits anteriores
+                                </p>
+                                <button type="button" class="btn btn-danger">
+                                    <a href="viendoCommits.html" style="color: #f8f9fa;"> Siguiente</a>
+                                </button>
+                              </div>
                             </div>
                           </div>
-                          <!-- aquí va ejemplo de git log -->
-
-                          <!-- termina ejemplo de git log -->
-                        <br><br>
-                        <p class="lead">Si el resultado que muestra esta línea de comando es demasiada, podemos teclear <i>q</i> para regresar al modo normal de la consola o terminal.</p>
-                        <br>
-                        <p class="lead"> También de puede delimitar el tamaño o número de commits que regresa <i>git log</i> solo tenemos que ejecutar la siguiente línea de código</p><br>
-                        <div class="row">
-                          <div class="alert alert-dismissible box-header" style="background-color:#7CB2D2">
-                          <p><code style="background-color:transparent;color:#000000"><b>git  log  -n  &#60;limit&#62;</b></code></p>
-                            </div>
-                          </div>
-                        <p class="lead">Donde limit es el número de commits que queremos ver.</p>
-                        <div class="row">
-                          <div class="col-lg-12 text-center">
-                            <h2 class="leader">Siguiente</h2>
-                        <a href="viendoCommits.html"><img src="img/empezando/commits.svg" alt="repositorio" width='60%'/></a>
-                         <h3 class="leader">Viendo Commits anteriores</h3>
-                      </div>
-                    </div>
-                    </div>
-
+                          <br>
+                          <br>
+        
+                        </div>
+        
                 </div>
+                </div>
+            </section>
+          </div>
+        
 
-
-            </div>
-    </section>
+</main>
+<div class="pie">
+  <div class="row">
+      <div class="col-md-4 text-center">
+          <div class="col-pie">
+              <a href="empresa.html">Quiénes somos</a>
+              <br>
+              <a href="http://expea.mx/empresa/web/index.php?r=/interesados/tienda">Contacto</a>
+              <br>
+              <a href="http://expea.mx/empresa/web/index.php?r=/interesados/create">Programadores</a>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="col-pie">
+              <h7>Excelencia en Programación, Educación y Asesoría</h7>
+              <br>
+              <h7>Av. Tigre No 119 Fraccionamiento La Cueva del Jaguar</h7>
+              <br>
+              <h7>C.P. 29096 Tuxtla Gutiérrez, Chiapas, México</h7>
+          </div>
+      </div>
+      <div class="col-md-4 text-center">
+          <div class="col-pie">
+              <a href="https:///twitter.com/expeasoft"><img src="imgs/twitter-circle-white.png" alt="twitter"
+                      width="40" height="40"></a>
+              <a href="https://www.facebook.com/expeasoft/"><img src="imgs/f-logo.png" alt="facebook" width="40"
+                      height="40"></a>
+              <a href="https://expeasoft.blogspot.com"><img src="imgs/blogger.png" alt="blogger" width="40"
+                  height="40"></a>
+                  <p>&copy; Expea 2021 </p>
+          </div>
+      </div>
   </div>
-  <!-- /.content-wrapper -->
-
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2016</strong>
-  </footer>
-
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
 </div>
-<!-- ./wrapper -->
 
-<!-- jQuery 2.2.3 -->
-<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('.top-navbar').addClass('fixed-top');
+                $('.top-navbar').removeClass('navbar-redondeado');
+            } else {
+                $('.top-navbar').removeClass('fixed-top');
+                $('.top-navbar').addClass('navbar-redondeado');
+            }
+        });
+    </script>
 </body>
+
 </html>

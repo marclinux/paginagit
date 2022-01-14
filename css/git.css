@@ -1,0 +1,42 @@
+.menu{
+ margin-top:50px;
+ 
+}
+
+.clor{
+  background-color: #f8f9fa !important;;
+  color: #f8f9fa;
+}
+
+.menu1{
+    
+    margin-top: 30px;
+    margin-bottom: 100%;
+   
+}
+
+ion-icon {
+    --ionicon-stroke-width: 26px;
+  }
+
+.displa{
+    font-family: Arial;
+    font-size: .875rem;
+    background-color: #000000;
+    border-style: solid;
+
+}
+
+@media (min-width:992px) {    
+  .vertical-nav {
+      position: fixed;
+      top: 56px;
+      left: 0;
+      width: 261px;
+      height: 100%;
+      box-shadow: inset -1px 0 0 rgba(221, 32, 32, 0.25);
+      
+      overflow-y: auto;
+      padding-top: 30px
+    }
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/git.css">
+    <link rel="stylesheet" href="css/expea.css">
+    <link rel="icon" type="image/png" href="Favicon.ico" sizes="16x16">
+
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">    
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vertical.css" rel="stylesheet">
+    <title>Guía Rápida Git</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark sticky-top  navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="index.html">Guía Rápida Git</a>
+    <a class="justify-content-end">
+      <ul class="navbar-nav px-3">
+        <li href="index.html" class="nav-item text-nowrap">
+          <img href="index.html" src="imgs/Expea33.png"
+        </li>
+      </ul>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto flex-column vertical-nav">
+        <li class="nav-item ">
+          <a class="nav-link "   href="index.html">
+            <ion-icon style="font-size:20px" src="icons/home-outline.svg"></ion-icon>
+            Empezando <span class="sr-only">(current)</span>
+          </a>
+                       
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="guadarCambios.html">
+            <ion-icon style="font-size:20px" src="icons/save-outline.svg"></ion-icon>
+            Guardando Cambios
+          </a>
+          <div class="dropdown-menu displa">
+              <a class="dropdown-item" href="#git_add">git add</a>
+              <a class="dropdown-item" href="#git_commit">git commit</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inspeccionando.html">
+            <ion-icon style="font-size:24px" src="icons/create-outline.svg"></ion-icon>
+            Inspeccionando un repositorio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="viendoCommits.html">
+            <ion-icon style="font-size:24px" src="icons/search-circle-outline.svg"></ion-icon>
+            Viendo Commits anteriores
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="deshacerCambios.html">
+            <ion-icon style="font-size:24px" src="icons/git-compare-outline.svg"></ion-icon>
+            Deshacer cambios
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="sincronizar.html">
+            <ion-icon style="font-size:24px" src="icons/layers-outline.svg"></ion-icon>
+            Sincronizar 
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="coloboradores.html">
+            <ion-icon style="font-size:24px" src="icons/share.svg"></ion-icon>
+            Usando Ramas 
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="flujodetrabajo.html">
+            <ion-icon style="font-size:24px" src="icons/file-earmark-code.svg"></ion-icon>
+            Flujo de trabajo de Gitflow 
+          </a>
+        </li>
+        
+      </ul>
+  
+    </div>
+  </nav>
+
+  
+        
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        
+        <div class="menu">
+            
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 id="git_add"><b>Guardando Cambios</b></h1>
+                        <img width="50%" src="imgs/guardarC2.svg" alt="repositorio" />
+                    </div>
+                </div>                
+            
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+        
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                              
+                             <h2 id="git_add"><b>git add</b></h2>
+                            <br>
+                            <p class="lead">Se guardan los cambios en el directorio, este comando se debe de hacer a todos los archivos que se hayan modificado o creado en el directorio donde se encuentra el proyecto, podemos ejecutar la línea de comando <b>git status</b>, para ver los cambios que se han hecho al directorio.</p>
+                            <br>
+                            <p class="lead">Uso para agregar un solo archivo:</p>
+                            <br>
+                             <div class="row">
+                               <div class="col-lg-12">
+                                 <div class="alert alert-dismissible box-header border" style="background-color:#f8f9fa">
+                                  <p><code style="background-color:transparent;color:#000"><b>git add &#60;file&#62; </b></code></p>
+                                </div>
+                              </div>
+                            </div>
+                              <br>
+                            <!-- ####  Ejemplo-->
+                            <div class="row" >
+                                    <div class="col-lg-12" >
+                                        <h3><i>Ejemplo</i></h3>
+                                        <div style="padding-right:10%; padding-left:10%">
+                                          <p class="lead">Suponiendo que ya tienes un proyecto en tu computadora y quieres inicializar el repositorio, las pasos que se tienen que hacer son los siguientes:</p>
+                                          <div class="row">
+        
+                                            <div class=" alert alert-dismissible  bg-black-active color-palette border" style="background-color: #f8f9fa;">
+                                                <p><code style="background-color:transparent;color:#000"><b>$ git add index.php 
+                                              </b>
+                                             </code></p>
+                                            </div>
+                                          </div>        
+                                    </div>
+                                  </div>
+        
+                              </div>
+        
+                            <!--  -->
+                            
+                            <br>
+                            <p class="lead">Uso para agregar un directorio:</p>
+                            <div class="col-lg-12">
+                              <div class="alert alert-dismissible box-header border" style="background-color:#f8f9fa">
+                               <p><code style="background-color:transparent;color:#000"><b>git add &#60;directory&#62; </b></code></p>
+                             </div>
+                           </div>
+                              <!-- git clone -->
+                               <div class="row" >
+                                    <div class="col-lg-12" >
+                                        <h3><i>Ejemplo</i></h3>
+                                        <div style="padding-right:10%; padding-left:10%">
+                                          <p class="lead">Suponiendo que hemos creado un subdirectorio, también se debe agregar al repositorio. </p>
+                                          <div class="row">
+                                            <div class="alert alert-dismissible  bg-black-active color-palette border" style="background-color: #f8f9fa;">
+                                              <p><code style="background-color:transparent;color:#000;"><b>$ ls<br>
+                                                file1.c file2.c file3.c file4.c file4.c <span style="color:#3C763D">morefiles</span><br>
+                                              </b></code></p>
+                                            </div>
+                                          </div>
+                                          <p class="lead"  id="git_config" >En este caso nuestro subdirectorio es morefiles, así que para agregarlo hacemos lo siguiente.</p>
+                                          <div class="row">
+                                            <div class="alert alert-dismissible  bg-black-active color-palette border" style="background-color: #f8f9fa;">
+                                              <p><code style="background-color:transparent;color:#000;"><b>$ git add morefiles<br>
+                                               
+                                              </b></code></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              <!-- termina ejemplo de git clone-->
+                              <br>
+                            <p class="lead">se recomienda guardar todos los cambios antes de un commit:</p>
+                            <div class="col-lg-12">
+                              <div class="alert alert-dismissible box-header border" style="background-color:#f8f9fa">
+                               <p><code style="background-color:transparent;color:#000"><b>git add -p </b></code></p>
+                             </div>
+                           </div>
+        
+                            <h2 id="git_commit"><b>git commit</b></h2>
+                            <br>
+                            <p class="lead">Es uno de los comandos más importantes junto con git add, ya que crea una copia segura o estable de un proyecto Git, estas copias estables o seguras son sólo localmente lo que significa que no tiene interacción con los repositorios de Git.</p>
+                            <br>
+                            <p class="lead">Uso:</p>
+                            <div class="col-lg-12">
+                              <div class="alert alert-dismissible box-header border" style="background-color:#f8f9fa">
+                               <p><code style="background-color:transparent;color:#000"><b>git commit </b></code></p>
+                             </div>
+                           </div>
+                            <p class="lead">Lo más recomendable es agregarle una descripción al commit, de esta forma llevas un control de os cambios que le has hecho al proyecto. </p>
+                            <div class="col-lg-12">
+                              <div class="alert alert-dismissible box-header border" style="background-color:#f8f9fa">
+                               <p><code style="background-color:transparent;color:#000"><b>git commit -m "&#60;message&#62;" </b></code></p>
+                             </div>
+                           </div>
+                           <!-- git clone -->
+                           <div class="row" >
+                            <div class="col-lg-12" >
+                                <h3><i>Ejemplo</i></h3>
+                                <div style="padding-right:10%; padding-left:10%">
+                                  <p class="lead">Una vez agregados todos los archivos modificados o creados al repositorio local, entonces se ejecuta el comando commit como sigue  </p>
+                                  <div class="row">
+                                    <div class="alert alert-dismissible  bg-black-active color-palette border" style="background-color: #f8f9fa;">
+                                      <p><code style="background-color:transparent;color:#000"><b>$git commit -m "descripción de lo se ha hecho en este commit" <br>
+                                      </b></code></p>
+                                    </div>
+                                  </div>
+                                  <p class="lead"  id="git_config" >El mensaje que se le coloca al commit es como un identifiacador para saber que cambios se le han hecho al proyecto entre desde el ultimo commit ejecutado.</p>
+                                  
+                                </div>
+                            </div>
+                        </div> 
+                        <br>
+                        <br> 
+                        <br>
+                                              
+
+                          
+                        <div class="row">             
+                            
+                          <div class="col-sm-6">
+                            <div class="container text-center">
+                              
+                              <p class="lead">
+                                Creación de un repositorio
+                              </p>
+                              <button type="button" class="btn btn-danger">
+                                <a href="index.html" style="color: #f8f9fa;"> Anterior </a>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="container text-center">
+                              
+                              <p class="lead">
+                                Inspeccionando un repositorio
+                              </p>
+                              
+                              <button type="button" class="btn btn-danger">
+                                  <a href="inspeccionando.html" style="color: #f8f9fa;"> Siguiente</a>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <br>
+                        <br>
+                            
+        
+                        </div>
+        
+                    </div>
+                </div>
+            </section>
+          </div>
+        
+    </main>
+              
+    
+    <div class="pie">
+      <div class="row">
+          <div class="col-md-4 text-center">
+              <div class="col-pie">
+                  <a href="empresa.html">Quiénes somos</a>
+                  <br>
+                  <a href="http://expea.mx/empresa/web/index.php?r=/interesados/tienda">Contacto</a>
+                  <br>
+                  <a href="http://expea.mx/empresa/web/index.php?r=/interesados/create">Programadores</a>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="col-pie">
+                  <h7>Excelencia en Programación, Educación y Asesoría</h7>
+                  <br>
+                  <h7>Av. Tigre No 119 Fraccionamiento La Cueva del Jaguar</h7>
+                  <br>
+                  <h7>C.P. 29096 Tuxtla Gutiérrez, Chiapas, México</h7>
+              </div>
+          </div>
+          <div class="col-md-4 text-center">
+              <div class="col-pie">
+                  <a href="https:///twitter.com/expeasoft"><img src="imgs/twitter-circle-white.png" alt="twitter"
+                          width="40" height="40"></a>
+                  <a href="https://www.facebook.com/expeasoft/"><img src="imgs/f-logo.png" alt="facebook" width="40"
+                          height="40"></a>
+                  <a href="https://expeasoft.blogspot.com"><img src="imgs/blogger.png" alt="blogger" width="40"
+                      height="40"></a>
+                      <p>&copy; Expea 2021 </p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('.top-navbar').addClass('fixed-top');
+                $('.top-navbar').removeClass('navbar-redondeado');
+            } else {
+                $('.top-navbar').removeClass('fixed-top');
+                $('.top-navbar').addClass('navbar-redondeado');
+            }
+        });
+    </script>
+</body>
+
+</html>
