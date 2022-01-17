@@ -22,9 +22,19 @@ ion-icon {
 .displa{
     font-family: Arial;
     font-size: .875rem;
-    background-color: #000000;
+    background-color: #440b12;
     border-style: solid;
+    color: #ffffff;
 
+}
+.text_c {
+    font-family: Arial;
+    font-size: .875rem;
+    color: #ffffff;
+}
+
+.title_2 {
+color: #f80031;
 }
 
 @media (min-width:992px) {    
@@ -34,9 +44,10 @@ ion-icon {
       left: 0;
       width: 261px;
       height: 100%;
-      box-shadow: inset -1px 0 0 rgba(221, 32, 32, 0.25);
+      
       
       overflow-y: auto;
-      padding-top: 30px
+      padding-top: 30px;
     }
 }
+
